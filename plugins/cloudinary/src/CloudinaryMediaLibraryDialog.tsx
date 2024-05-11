@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { Button, Dialog, DialogActions } from '@material-ui/core';
 import React, { Fragment } from 'react';
+import { jsx } from '@emotion/core';
+import { Dialog, Button, DialogActions } from '@material-ui/core';
 
 interface CloudinaryMediaLibraryDialogProps {
   openDialog: boolean;

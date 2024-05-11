@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { Builder, BuilderElement } from '@builder.io/sdk';
-import { InterpolationWithTheme, jsx } from '@emotion/core';
+import { jsx, InterpolationWithTheme } from '@emotion/core';
 import React from 'react';
-import { tryEval } from '../functions/try-eval';
+import { Builder, BuilderElement } from '@builder.io/sdk';
 import { withBuilder } from '../functions/with-builder';
 import { BuilderStoreContext } from '../store/builder-store';
+import { tryEval } from '../functions/try-eval';
 
 const iconUrl =
   'https://firebasestorage.googleapis.com/v0/b/builder-3b0a2.appspot.com/o/images%2Fbaseline-text_fields-24px%20(1).svg?alt=media&token=12177b73-0ee3-42ca-98c6-0dd003de1929';

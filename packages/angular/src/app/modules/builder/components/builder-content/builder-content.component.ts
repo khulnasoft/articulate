@@ -1,12 +1,12 @@
 import {
-  ChangeDetectionStrategy,
   Component,
   ElementRef,
   EventEmitter,
-  Input,
   OnDestroy,
   OnInit,
   Output,
+  Input,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { Builder, GetContentOptions } from '@builder.io/sdk';
 import { BuilderService } from '../../services/builder.service';

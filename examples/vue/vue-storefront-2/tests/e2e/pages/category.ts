@@ -1,5 +1,5 @@
-import Base from './base';
 import { el } from './utils/element';
+import Base from './base';
 
 type View = 'tiles' | 'list';
 

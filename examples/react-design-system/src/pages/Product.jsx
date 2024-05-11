@@ -1,8 +1,8 @@
-import { BuilderComponent } from '@builder.io/react';
-import { Button, CircularProgress } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
-import { useEffect, useState } from 'react';
+import { CircularProgress, Button } from '@material-ui/core';
 import { ProductsList } from '../components/ProductsList/ProductsList';
+import { BuilderComponent } from '@builder.io/react';
 
 export function Product() {
   const id = window.location.pathname.split('/')[2];

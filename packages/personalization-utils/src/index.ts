@@ -1,2 +1,2 @@
-export { PersonalizedURL } from './personalized-url';
 export { getUserAttributes } from './utils';
+export { PersonalizedURL } from './personalized-url';

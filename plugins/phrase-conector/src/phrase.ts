@@ -1,5 +1,5 @@
-import appState from '@builder.io/app-context';
 import pkg from '../package.json';
+import appState from '@builder.io/app-context';
 
 export type Project = {
   uid: string;

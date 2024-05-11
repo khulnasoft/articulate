@@ -1,3 +1,4 @@
+import React from 'react';
 import { getQueryParam } from '@/scripts/init-referrer-cookie';
 import { Builder, BuilderComponent } from '@builder.io/react';
 import { useEffect, useState } from 'react';

@@ -1,10 +1,10 @@
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
+import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
-import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
+import replace from 'rollup-plugin-replace';
+import json from 'rollup-plugin-json';
+import { terser } from 'rollup-plugin-terser';
 
 import pkg from './package.json';
 

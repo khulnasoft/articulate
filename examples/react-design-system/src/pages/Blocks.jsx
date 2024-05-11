@@ -1,4 +1,5 @@
 import { Builder, BuilderContent } from '@builder.io/react';
+import React from 'react';
 import { DoubleColumns } from '../components/DoubleColumns/DoubleColumns';
 import { Hero } from '../components/Hero/Hero';
 import { ProductsList } from '../components/ProductsList/ProductsList';

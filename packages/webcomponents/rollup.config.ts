@@ -1,14 +1,15 @@
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
+import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
+import json from 'rollup-plugin-json';
 import { uglify } from 'rollup-plugin-uglify';
+import replace from 'rollup-plugin-replace';
 // import alias from 'rollup-plugin-alias'
 import alias from '@rollup/plugin-alias';
-import * as path from 'path';
 import serve from 'rollup-plugin-serve';
+import * as path from 'path';
+import visualizer from 'rollup-plugin-visualizer';
 
 const pkg = require('./package.json');
 

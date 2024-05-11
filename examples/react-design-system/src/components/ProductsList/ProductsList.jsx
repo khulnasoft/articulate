@@ -1,7 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
-import { useEffect, useState } from 'react';
 import { Product } from '../Product/Product';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -28,6 +28,7 @@ const catSwaps = {
   // Due to issues with ShopStyle's API returning inappropriate content for some categories,
   // we override to another category that doesn't have these issues
   ['womens-fashion']: 'handbags',
+  ['living']: 'garden',
 };
 
 export const ProductsList = props => {

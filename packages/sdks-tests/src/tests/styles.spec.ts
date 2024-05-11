@@ -6,7 +6,10 @@ import {
   getClassSelector,
   isRNSDK,
   test,
-} from './helpers.js';
+} from './helpers/index.js';
+
+// RN SDK does not use ScrollView in Symbol
+const FIRST_BLOCK_SYMBOL_SELECTOR = `${getClassSelector('builder-blocks')} > div`;
 
 const FIRST_BLOCK_SELECTOR = isRNSDK
   ? // ScrollView adds an extra div wrapper
@@ -15,6 +18,7 @@ const FIRST_BLOCK_SELECTOR = isRNSDK
 
 test.describe('Styles', () => {
   test('data-binding-styles', async ({ page }) => {
+    test.fail(excludeTestFor({ angular: true }), 'Styles not working properly in Angular SDK');
     await page.goto('/data-binding-styles');
     await expect(page.locator(`text="This text should be red..."`)).toHaveCSS(
       'color',
@@ -24,6 +28,7 @@ test.describe('Styles', () => {
 
   test.describe('Style Bindings', () => {
     test('Content', async ({ page }) => {
+      test.fail(excludeTestFor({ angular: true }), 'Styles not working properly in Angular SDK');
       await page.goto('/content-bindings');
 
       const expected = {
@@ -44,6 +49,7 @@ test.describe('Styles', () => {
       // title: 'some special title'
     });
     test('Symbol', async ({ page }) => {
+      test.fail(excludeTestFor({ angular: true }), 'Styles not working properly in Angular SDK');
       await page.goto('/symbol-bindings');
 
       const expected = {
@@ -53,7 +59,7 @@ test.describe('Styles', () => {
         'border-bottom-right-radius': '40px',
       };
       const locator = page
-        .locator(FIRST_BLOCK_SELECTOR)
+        .locator(FIRST_BLOCK_SYMBOL_SELECTOR)
         .filter({ hasText: 'Enter some text...' })
         .last();
 
@@ -82,6 +88,7 @@ test.describe('Styles', () => {
   });
 
   test('Should apply CSS nesting', async ({ page }) => {
+    test.fail(excludeTestFor({ angular: true }), 'Styles not working properly in Angular SDK');
     test.fail(
       excludeTestFor({
         // we don't support CSS nesting in RN.

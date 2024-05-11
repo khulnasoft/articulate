@@ -1,4 +1,4 @@
-import { Context, Expression, Liquid as LLiquid } from 'liquidjs';
+import { Context, Liquid as LLiquid, Expression } from 'liquidjs';
 import { toValue } from './utils/async';
 import { registerLiquidFilters } from './utils/register-liquid-filters';
 

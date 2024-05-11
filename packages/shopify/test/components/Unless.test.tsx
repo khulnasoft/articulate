@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { UnlessBlock } from '../../react/components/Unless';
-import { builderComponentIdRegex, mockState, text } from '../modules/helpers';
+import { mockState, text, builderComponentIdRegex } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 describe('IfElse', () => {
   test('Basic Unless True', () => {

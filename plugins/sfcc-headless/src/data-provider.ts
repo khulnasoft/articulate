@@ -1,3 +1,5 @@
+import { CommerceAPIOperations } from '@builder.io/commerce-plugin-tools';
+
 const RESOURCE_TYPES: {
   name: string;
   id: string;

@@ -1,11 +1,11 @@
-import cheerio from 'cheerio'
 import Document, {
-  DocumentContext,
-  Head,
   Html,
+  Head,
   Main,
   NextScript,
+  DocumentContext,
 } from 'next/document'
+import cheerio from 'cheerio'
 
 /**
  * See this issue for more details https://github.com/emotion-js/emotion/issues/2040

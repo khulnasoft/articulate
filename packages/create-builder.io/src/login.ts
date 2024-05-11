@@ -1,12 +1,12 @@
-import { Spinner } from 'cli-spinner';
-import { bold, yellowBright } from 'colorette';
-import { existsSync, outputJSON, readJSON } from 'fs-extra';
-import http from 'http';
-import { userInfo } from 'os';
 import { join } from 'path';
-import { cliOptions } from './cli';
+import { userInfo } from 'os';
+import { readJSON, existsSync, outputJSON } from 'fs-extra';
+import http from 'http';
+import { bold, yellowBright } from 'colorette';
+import { Spinner } from 'cli-spinner';
 import { HOST, openBuilderAuth } from './open';
 import { askQuestion } from './utils';
+import { cliOptions } from './cli';
 
 interface Credentials {
   version: '1';

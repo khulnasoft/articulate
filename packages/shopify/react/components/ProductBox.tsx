@@ -4,18 +4,18 @@
  */
 
 /** @jsx jsx */
+import { jsx, css, keyframes } from '@emotion/core';
+import styled from '@emotion/styled';
+import { ShopifyProduct } from '../interfaces/shopify-product';
+import React, { useEffect, useState } from 'react';
+import { BuilderElement } from '@builder.io/sdk';
 import {
   Builder,
-  BuilderBlockComponent,
   BuilderStore,
   BuilderStoreContext,
+  BuilderBlockComponent,
 } from '@builder.io/react';
-import { BuilderElement } from '@builder.io/sdk';
-import { jsx, keyframes } from '@emotion/core';
-import styled from '@emotion/styled';
-import React, { useEffect, useState } from 'react';
 import { modifyProduct } from '../functions/modify-product';
-import { ShopifyProduct } from '../interfaces/shopify-product';
 
 interface ProductBoxProps {
   product?: string | number;

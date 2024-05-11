@@ -1,22 +1,22 @@
 /** @jsx jsx */
-import { BuilderContent } from '@builder.io/sdk'
 import { jsx } from '@emotion/core'
+import React, { useEffect } from 'react'
+import { CustomEditorProps } from '../interfaces/custom-editor'
+import { useObserver, useLocalStore } from 'mobx-react'
+import { BuilderContent } from '@builder.io/sdk'
 import {
-  Avatar,
   Button,
-  CircularProgress,
-  Divider,
   List,
+  CircularProgress,
+  ListItemText,
   ListItem,
   ListItemAvatar,
-  ListItemText,
+  Avatar,
   Paper,
+  Divider,
 } from '@material-ui/core'
-import { useLocalStore, useObserver } from 'mobx-react'
-import React, { useEffect } from 'react'
-import { ApplicationContext } from '../interfaces/application-context'
-import { CustomEditorProps } from '../interfaces/custom-editor'
 import { Stack } from './stack'
+import { ApplicationContext } from '../interfaces/application-context'
 
 /**
  * Custom field type editor to add additional pages to a campaign

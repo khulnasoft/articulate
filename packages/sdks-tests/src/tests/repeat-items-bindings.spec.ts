@@ -1,13 +1,12 @@
 import { expect } from '@playwright/test';
-import { test } from './helpers.js';
+import { excludeTestFor, test } from './helpers/index.js';
 import { sdk } from './sdk.js';
 
 test.describe('Repeat items bindings', () => {
+  test.fail(excludeTestFor({ angular: true }), 'Angular Gen2 SDK not implemented.');
   test('Updating state should display repeat collection', async ({ page }) => {
-    test.fail(
-      // NextJS fundamentally doesn't support state updates
-      sdk === 'rsc'
-    );
+    test.fail(sdk === 'rsc', "NextJS SDK doesn't support state updates");
+
     await page.goto('/repeat-items-bindings/');
     const buttonLocator = page.getByText('Click me');
     await expect(buttonLocator).toBeVisible();

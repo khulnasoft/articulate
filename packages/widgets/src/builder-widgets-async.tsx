@@ -1,10 +1,10 @@
-import { Builder } from '@builder.io/react';
 import dynamic from 'next/dynamic';
+import { Builder } from '@builder.io/react';
 
-import { accordionConfig } from './components/Accordion.config';
 import { carouselConfig } from './components/Carousel.config';
-import { masonryConfig } from './components/Masonry.config';
 import { tabsConfig } from './components/Tabs.config';
+import { accordionConfig } from './components/Accordion.config';
+import { masonryConfig } from './components/Masonry.config';
 
 Builder.registerComponent(
   dynamic(() => import('./components/Carousel').then(mod => mod.CarouselComponent as any)),

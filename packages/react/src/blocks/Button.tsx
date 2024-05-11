@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Link } from '../components/Link';
 import { withBuilder } from '../functions/with-builder';
+import { Link } from '../components/Link';
 
 export interface ButtonProps {
   attributes?: any;

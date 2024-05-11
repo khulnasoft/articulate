@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes } from 'react';
+import React, { AnchorHTMLAttributes } from 'react';
 import { theme } from '../constants/theme';
 import { RenderLink } from '../functions/render-link';
 

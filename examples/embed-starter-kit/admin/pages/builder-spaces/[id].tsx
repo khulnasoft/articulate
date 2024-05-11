@@ -1,12 +1,12 @@
-import { CircularProgress, Toolbar } from '@material-ui/core'
-import { getMinifiedRecord, table } from 'helpers/airtable'
-import auth0 from 'helpers/auth0'
 import type {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
 } from 'next'
+import auth0 from 'helpers/auth0'
+import { getMinifiedRecord, table } from 'helpers/airtable'
 import { useEffect, useState } from 'react'
 import useScript from 'react-script-hook'
+import { CircularProgress, Toolbar } from '@material-ui/core'
 
 export async function getServerSideProps(
   context: GetServerSidePropsContext<{ id: string }>

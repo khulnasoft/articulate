@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { Builder } from '@builder.io/sdk';
 import React from 'react';
+import { Builder } from '@builder.io/sdk';
 import { BuilderStoreContext } from '../store/builder-store';
 
 export interface SpacerProps {

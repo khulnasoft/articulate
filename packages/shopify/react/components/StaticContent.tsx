@@ -1,6 +1,6 @@
-import { BuilderBlockComponent, withBuilder } from '@builder.io/react';
-import { Builder, BuilderElement } from '@builder.io/sdk';
 import React, { useEffect, useRef } from 'react';
+import { BuilderElement, Builder } from '@builder.io/sdk';
+import { BuilderBlockComponent, withBuilder } from '@builder.io/react';
 
 const refs: Record<string, Element> = {};
 

@@ -15,7 +15,7 @@ import InlinedStyles from '../inlined-styles.lite.jsx';
 import type { ContentVariantsPrps } from './content-variants.types.js';
 import {
   checkShouldRenderVariants,
-  getScriptString,
+  getInitVariantsFnsScriptString,
   getUpdateCookieAndStylesScript,
   getVariants,
 } from './helpers.js';
@@ -33,18 +33,15 @@ type VariantsProviderProps = ContentVariantsPrps & {
   /**
    * For internal use only. Do not provide this prop.
    */
-  __isNestedRender?: boolean;
+  isNestedRender?: boolean;
 };
 
 export default function ContentVariants(props: VariantsProviderProps) {
   onMount(() => {
     /**
-     * We unmount the non-winning variants post-hydration in Vue.
+     * For Solid/Svelte: we unmount the non-winning variants post-hydration.
      */
     useTarget({
-      vue: () => {
-        state.shouldRenderVariants = false;
-      },
       solid: () => {
         state.shouldRenderVariants = false;
       },
@@ -86,20 +83,27 @@ export default function ContentVariants(props: VariantsProviderProps) {
 
   return (
     <>
-      <Show when={!props.__isNestedRender && TARGET !== 'reactNative'}>
-        <InlinedScript scriptStr={getScriptString()} />
+      <Show when={!props.isNestedRender && TARGET !== 'reactNative'}>
+        <InlinedScript
+          scriptStr={getInitVariantsFnsScriptString()}
+          id="builderio-init-variants-fns"
+        />
       </Show>
       <Show when={state.shouldRenderVariants}>
         <InlinedStyles
-          id={`variants-styles-${props.content?.id}`}
+          id="builderio-variants"
           styles={state.hideVariantsStyleString}
         />
         {/* Sets A/B test cookie for all `RenderContent` to read */}
-        <InlinedScript scriptStr={state.updateCookieAndStylesScriptStr} />
+        <InlinedScript
+          id="builderio-variants-visibility"
+          scriptStr={state.updateCookieAndStylesScriptStr}
+        />
 
         <For each={getVariants(props.content)}>
           {(variant) => (
             <ContentComponent
+              isNestedRender={props.isNestedRender}
               key={variant.testVariationId}
               content={variant}
               showContent={false}
@@ -109,20 +113,22 @@ export default function ContentVariants(props: VariantsProviderProps) {
               apiKey={props.apiKey}
               apiVersion={props.apiVersion}
               customComponents={props.customComponents}
+              linkComponent={props.linkComponent}
               canTrack={props.canTrack}
               locale={props.locale}
-              includeRefs={props.includeRefs}
               enrich={props.enrich}
               isSsrAbTest={state.shouldRenderVariants}
               blocksWrapper={props.blocksWrapper}
               blocksWrapperProps={props.blocksWrapperProps}
               contentWrapper={props.contentWrapper}
               contentWrapperProps={props.contentWrapperProps}
+              trustedHosts={props.trustedHosts}
             />
           )}
         </For>
       </Show>
       <ContentComponent
+        isNestedRender={props.isNestedRender}
         {...useTarget({
           vue: { key: state.shouldRenderVariants.toString() },
           default: {},
@@ -135,15 +141,16 @@ export default function ContentVariants(props: VariantsProviderProps) {
         apiKey={props.apiKey}
         apiVersion={props.apiVersion}
         customComponents={props.customComponents}
+        linkComponent={props.linkComponent}
         canTrack={props.canTrack}
         locale={props.locale}
-        includeRefs={props.includeRefs}
         enrich={props.enrich}
         isSsrAbTest={state.shouldRenderVariants}
         blocksWrapper={props.blocksWrapper}
         blocksWrapperProps={props.blocksWrapperProps}
         contentWrapper={props.contentWrapper}
         contentWrapperProps={props.contentWrapperProps}
+        trustedHosts={props.trustedHosts}
       />
     </>
   );

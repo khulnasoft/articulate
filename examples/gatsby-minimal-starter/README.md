@@ -20,7 +20,7 @@ Run this example Gatsby project to see sample builder data, or replace the api k
 2.  **Clone this demo.**
 
     ```bash
-    git clone git@github.com:khulnasoft/articulate.git
+    git clone git@github.com:BuilderIO/builder.git
     cd builder/examples/gatsby
     npm install
     npm run start

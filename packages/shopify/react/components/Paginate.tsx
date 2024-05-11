@@ -1,9 +1,9 @@
 import {
+  BuilderStore,
+  withBuilder,
+  BuilderStoreContext,
   BuilderBlockComponent,
   BuilderElement,
-  BuilderStore,
-  BuilderStoreContext,
-  withBuilder,
 } from '@builder.io/react';
 import * as React from 'react';
 

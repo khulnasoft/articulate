@@ -1,18 +1,18 @@
-import { builder, Builder } from '@builder.io/react';
-import green from '@material-ui/core/colors/green';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import Head from 'next/head';
-import SingletonRouter, { Router } from 'next/router';
 import '../styles/global.css';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { builder, Builder } from '@builder.io/react';
+import Head from 'next/head';
+import green from '@material-ui/core/colors/green';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import SingletonRouter, { Router } from 'next/router';
 // Import our components so they get registered
-import { AppPropsType } from 'next/dist/next-server/lib/utils';
-import React, { useCallback } from 'react';
 import '../scripts/init-referrer-cookie';
+import React, { useCallback } from 'react';
+import { AppPropsType } from 'next/dist/next-server/lib/utils';
 
-import { defaultDescription, defaultTitle } from '@/constants/seo-tags';
-import '../components/logo';
 import '../components/widgets';
+import '../components/logo';
+import { defaultDescription, defaultTitle } from '@/constants/seo-tags';
 
 Builder.isStatic = true;
 // Heavy handed disable fonts for perf

@@ -1,8 +1,8 @@
 import { MenuItem, Select } from '@material-ui/core'
 import { Settings } from '@material-ui/icons'
 import React, { useEffect, useState } from 'react'
-import { pluginId } from '../constants'
 import { ExtendedApplicationContext } from '../interfaces/application-context'
+import { pluginId } from '../constants'
 const context: ExtendedApplicationContext =
   require('@builder.io/app-context').default
 

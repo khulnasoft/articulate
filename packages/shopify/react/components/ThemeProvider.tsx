@@ -1,6 +1,6 @@
-import { StateProvider, withBuilder } from '@builder.io/react';
-import { BuilderElement } from '@builder.io/sdk';
 import React from 'react';
+import { BuilderElement } from '@builder.io/sdk';
+import { StateProvider, withBuilder } from '@builder.io/react';
 
 interface ThemeProviderProps {
   builderBlock: BuilderElement;

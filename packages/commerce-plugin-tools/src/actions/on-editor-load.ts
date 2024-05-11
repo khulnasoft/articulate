@@ -1,6 +1,6 @@
 import appState from '@builder.io/app-context';
-import capitalize from 'lodash/capitalize';
 import template from 'lodash/template';
+import capitalize from 'lodash/capitalize';
 import { CommerceAPIOperations } from '..';
 
 interface ContentEditorActions {

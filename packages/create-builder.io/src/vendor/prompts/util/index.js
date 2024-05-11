@@ -1,7 +1,7 @@
 import action from './action';
 import clear from './clear';
-import figures from './figures';
-import strip from './strip';
 import * as style from './style';
+import strip from './strip';
+import figures from './figures';
 
-export { action, clear, figures, strip, style };
+export { action, clear, style, strip, figures };

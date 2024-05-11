@@ -1,6 +1,6 @@
 'use client';
-import { BuilderElement } from '@builder.io/sdk';
 import React from 'react';
+import { BuilderElement } from '@builder.io/sdk';
 import { withBuilder } from '../../functions/with-builder';
 
 export interface ImgProps {

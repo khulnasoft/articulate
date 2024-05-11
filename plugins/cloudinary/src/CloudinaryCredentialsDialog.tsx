@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import React from 'react';
 import {
-  Button,
   Dialog,
+  Button,
   DialogActions,
-  DialogContent,
   DialogTitle,
+  DialogContent,
   TextField,
 } from '@material-ui/core';
-import React from 'react';
 
 interface CloudinaryCredentialsDialogProps {
   openDialog: boolean;

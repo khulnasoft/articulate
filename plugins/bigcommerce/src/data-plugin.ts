@@ -1,5 +1,5 @@
-import { CommerceAPIOperations } from '@builder.io/commerce-plugin-tools';
 import { APIOperations, ResourceType } from '@builder.io/data-plugin-tools';
+import { CommerceAPIOperations } from '@builder.io/commerce-plugin-tools';
 type BigCommerceResourceType = 'product' | 'category';
 
 const buildHeaders = (headers: any) => {

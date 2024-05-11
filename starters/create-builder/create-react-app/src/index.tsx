@@ -1,12 +1,12 @@
-import { withChildren } from '@builder.io/react';
-import { builder, Builder } from '@builder.io/sdk';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import { Header } from './components/Header';
-import { ShoesViewer } from './components/ShoesViewer';
-import { SourceCodeLink } from './components/SourceCodeLink';
 import './index.css';
+import App from './App';
+import { builder, Builder } from '@builder.io/sdk';
+import { SourceCodeLink } from './components/SourceCodeLink';
+import { ShoesViewer } from './components/ShoesViewer';
+import { Header } from './components/Header';
+import { withChildren } from '@builder.io/react';
 
 builder.init('builder-public-key');
 

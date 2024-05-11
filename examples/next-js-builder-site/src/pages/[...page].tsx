@@ -1,12 +1,13 @@
-import { USE_CODEGEN } from '@/constants/use-codegen';
-import { Builder, BuilderComponent, builder } from '@builder.io/react';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import React from 'react';
+import { builder, BuilderComponent, Builder } from '@builder.io/react';
 import Head from 'next/head';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import Error from './_error';
+import { renderLink } from '../functions/render-link';
 import { defaultDescription, defaultTitle } from '../constants/seo-tags';
 import { getBuilderStaticPaths } from '../functions/get-builder-static-paths';
 import { getBuilderStaticProps } from '../functions/get-builder-static-props';
-import { renderLink } from '../functions/render-link';
-import Error from './_error';
+import { USE_CODEGEN } from '@/constants/use-codegen';
 
 builder.init('YJIGb4i01jvw0SRdL5Bt');
 

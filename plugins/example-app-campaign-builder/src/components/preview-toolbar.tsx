@@ -1,20 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { IconButton, Tooltip } from '@material-ui/core'
+import React from 'react'
+import { useObserver, observer } from 'mobx-react'
+import { ApplicationContext } from '../interfaces/application-context'
+import { Tooltip, IconButton } from '@material-ui/core'
 import {
-  Create,
+  Undo,
   Fullscreen,
-  LaptopMac,
   LineStyle,
+  Create,
+  TabletMac,
   PhoneIphone,
+  LaptopMac,
   Redo,
   Refresh,
-  TabletMac,
-  Undo,
 } from '@material-ui/icons'
-import { observer, useObserver } from 'mobx-react'
-import React from 'react'
-import { ApplicationContext } from '../interfaces/application-context'
 
 const context: ApplicationContext = require('@builder.io/app-context').default
 

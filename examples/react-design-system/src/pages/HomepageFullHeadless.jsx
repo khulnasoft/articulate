@@ -1,6 +1,7 @@
+import React, { useState } from 'react';
 import { BuilderContent } from '@builder.io/react';
-import styled from 'styled-components';
 import { ProductsList } from '../components/ProductsList/ProductsList';
+import styled from 'styled-components';
 
 // This is a "pure headless data" homepage example.
 // Use this as reference for using Builder data models w/ React.

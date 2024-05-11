@@ -1,5 +1,5 @@
-import { parse as oldParse } from 'url';
 import { parse } from './url';
+import { parse as oldParse } from 'url';
 
 describe('.parse', () => {
   test('can parse a full url', async () => {

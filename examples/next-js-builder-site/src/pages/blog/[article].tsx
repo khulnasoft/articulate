@@ -4,15 +4,16 @@ import {
   BuilderContent,
   Image,
 } from '@builder.io/react';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import React from 'react';
 import Head from 'next/head';
-import AtvImg from '../../components/atv-image';
-import { ReadProgress } from '../../components/read-progress';
-import { TextLink } from '../../components/text-link';
-import { mediumBreakpointMediaQuery } from '../../constants/breakpoints';
-import { footerBuilderEntryId } from '../../constants/footer-builder-entry-id';
-import { theme } from '../../constants/theme';
 import { renderLink, RenderLink } from '../../functions/render-link';
+import { TextLink } from '../../components/text-link';
+import { theme } from '../../constants/theme';
+import { mediumBreakpointMediaQuery } from '../../constants/breakpoints';
+import { ReadProgress } from '../../components/read-progress';
+import AtvImg from '../../components/atv-image';
+import { footerBuilderEntryId } from '../../constants/footer-builder-entry-id';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 
 builder.init('YJIGb4i01jvw0SRdL5Bt');
 

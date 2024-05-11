@@ -1,9 +1,9 @@
 import Container from '@/components/container';
 import Intro from '@/components/intro';
 import Layout from '@/components/layout';
-import PostCard from '@/components/post-card';
-import { builder } from '@builder.io/react';
 import Head from 'next/head';
+import { builder } from '@builder.io/react';
+import PostCard from '@/components/post-card';
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0];

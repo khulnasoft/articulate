@@ -1,6 +1,6 @@
-import { getMassagedProps } from './dropdownPropsExtractor';
 import { safeEvaluate } from './mapperEvaluator';
 import { executeGet } from './selectionsClient';
+import { getMassagedProps } from './dropdownPropsExtractor';
 
 const selectionsCache = new Map();
 

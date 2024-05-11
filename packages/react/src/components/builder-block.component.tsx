@@ -3,14 +3,14 @@ import { Builder, builder, BuilderElement, Component } from '@builder.io/sdk';
 import { ClassNames, jsx } from '@emotion/core';
 import React from 'react';
 import { getSizesForBreakpoints, Size, sizeNames } from '../constants/device-sizes.constant';
-import { applyPatchWithMinimalMutationChain } from '../functions/apply-patch-with-mutation';
-import { blockToHtmlString } from '../functions/block-to-html-string';
 import { set } from '../functions/set';
 import { api, stringToFunction } from '../functions/string-to-function';
-import { fastClone } from '../functions/utils';
 import { BuilderAsyncRequestsContext, RequestOrPromise } from '../store/builder-async-requests';
 import { BuilderStoreContext } from '../store/builder-store';
+import { applyPatchWithMinimalMutationChain } from '../functions/apply-patch-with-mutation';
+import { blockToHtmlString } from '../functions/block-to-html-string';
 import { Link } from './Link';
+import { fastClone } from '../functions/utils';
 
 const camelCaseToKebabCase = (str?: string) =>
   str ? str.replace(/([A-Z])/g, g => `-${g[0].toLowerCase()}`) : '';

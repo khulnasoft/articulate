@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-import { BuilderComponent, builder } from '@builder.io/react';
-import '@builder.io/widgets';
+import * as React from 'react';
 import { graphql } from 'gatsby';
+import { BuilderComponent, builder } from '@builder.io/react';
 import { Helmet } from 'react-helmet';
+import '@builder.io/widgets';
+import Hero from '/src/components/Hero/Hero.jsx';
 import '/src/components/Hero/Hero.builder.js';
 /**
  * Hero is an example of a custom component that you can use in the builder.io editor

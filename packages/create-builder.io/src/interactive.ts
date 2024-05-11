@@ -1,10 +1,10 @@
+import { cursor, erase } from 'sisteransi';
 import { blueBright, bold, dim } from 'colorette';
 import fs from 'fs-extra';
-import { cursor, erase } from 'sisteransi';
 import { createApp } from './create-app';
 import { STARTERS, Starter, getStarterRepo } from './starters';
-import { askQuestion, logError } from './utils';
 import { prompt } from './vendor/prompts';
+import { askQuestion, logError } from './utils';
 
 export async function runInteractive(starterName: string | undefined, autoRun: boolean) {
   process.stdout.write(erase.screen);

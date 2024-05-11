@@ -1,5 +1,5 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { Builder, BuilderElement } from '@builder.io/react';
-import React, { useEffect, useRef, useState } from 'react';
 import { findAndRunScripts } from '../functions/find-and-run-scripts';
 
 interface SectionRefProps {

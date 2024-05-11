@@ -1,6 +1,6 @@
-import * as mapperEvaluator from '../src/helpers/mapperEvaluator';
-import * as selectionsClient from '../src/helpers/selectionsClient';
 import { orchestrateSelections } from '../src/helpers/selectionsOrchestrator';
+import * as selectionsClient from '../src/helpers/selectionsClient';
+import * as mapperEvaluator from '../src/helpers/mapperEvaluator';
 
 describe('Selections orchestrator', () => {
   const sharedProps = {

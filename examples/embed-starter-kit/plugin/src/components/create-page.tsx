@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { Button, TextField, Typography } from '@material-ui/core'
+import { Button, MenuItem, TextField, Typography } from '@material-ui/core'
 import { useLocalStore, useObserver } from 'mobx-react'
 import { examplePageTemplate } from '../constants/page-templates'
 import { ApplicationContext } from '../interfaces/application-context'

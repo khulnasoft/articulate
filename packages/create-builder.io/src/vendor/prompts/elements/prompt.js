@@ -1,7 +1,7 @@
-import EventEmitter from 'events';
 import readline from 'readline';
-import { cursor } from 'sisteransi';
 import { action } from '../util';
+import EventEmitter from 'events';
+import { cursor } from 'sisteransi';
 
 const beep = '\x07';
 

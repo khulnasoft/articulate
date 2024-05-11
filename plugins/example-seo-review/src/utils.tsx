@@ -1,8 +1,8 @@
+import React from 'react';
+import '@emotion/core';
 import appState from '@builder.io/app-context';
 import { Builder } from '@builder.io/react';
-import '@emotion/core';
 import { Button } from '@material-ui/core';
-import React from 'react';
 
 export const registerContentAction = (contentAction: {
   label: string;

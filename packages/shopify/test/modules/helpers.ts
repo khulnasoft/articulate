@@ -1,7 +1,7 @@
-import { BuilderElement } from '@builder.io/sdk';
 import * as fs from 'fs-extra-promise';
-import { merge } from 'lodash';
 import { join } from 'path';
+import { merge } from 'lodash';
+import { BuilderElement } from '@builder.io/sdk';
 import Shopify from '../../js/index';
 
 // TODO: helpers for this

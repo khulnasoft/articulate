@@ -1,7 +1,7 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
 import { Resource } from '@builder.io/commerce-plugin-tools/dist/types/interfaces/resource';
 import pkg from '../package.json';
+import appState from '@builder.io/app-context';
 
 registerCommercePlugin(
   {

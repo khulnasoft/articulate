@@ -1,7 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useEffect } from 'react';
 import queryString from 'query-string';
-import { useEffect, useState } from 'react';
 import { Product } from '../Product/Product';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {

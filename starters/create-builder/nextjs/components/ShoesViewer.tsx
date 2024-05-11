@@ -1,7 +1,7 @@
-import { Environment, Instance, Instances, OrbitControls, useGLTF } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Suspense, useRef, useState } from 'react';
 import * as THREE from 'three';
+import { Suspense, useRef, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Instances, Instance, OrbitControls, Environment, useGLTF } from '@react-three/drei';
 
 const color = new THREE.Color();
 

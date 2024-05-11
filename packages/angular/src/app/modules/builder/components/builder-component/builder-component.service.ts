@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { BuilderContentDirective } from '../../directives/builder-content.directive';
 import { BuilderContentComponent } from '../builder-content/builder-content.component';
+import { BuilderContentDirective } from '../../directives/builder-content.directive';
 
 @Injectable()
 export class BuilderComponentService {

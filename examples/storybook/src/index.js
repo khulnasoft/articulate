@@ -1,9 +1,9 @@
-import { Builder, BuilderComponent } from '@builder.io/react/lite';
-import { makeStyles } from '@material-ui/core/styles';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './builder-settings';
+import { BuilderComponent, Builder } from '@builder.io/react/lite';
+import { makeStyles } from '@material-ui/core/styles';
 import './index.css';
+import './builder-settings';
 
 const App = () => {
   const [notFound, setNotFound] = useState(false);

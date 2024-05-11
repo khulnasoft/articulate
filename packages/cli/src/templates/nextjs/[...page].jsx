@@ -1,7 +1,8 @@
-import { Builder, BuilderComponent, builder, useIsPreviewing } from '@builder.io/react';
+import { useRouter } from 'next/router';
 import DefaultErrorPage from 'next/error';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import React from 'react';
+import { BuilderComponent, builder, useIsPreviewing, Builder } from '@builder.io/react';
 
 /*
   Initialize the Builder SDK with your organization's API Key

@@ -1,5 +1,6 @@
+import React from 'react';
+import { Parallax, Background } from 'react-parallax';
 import { makeStyles } from '@material-ui/core';
-import { Background, Parallax } from 'react-parallax';
 
 const useStyles = makeStyles(() => ({
   container: {

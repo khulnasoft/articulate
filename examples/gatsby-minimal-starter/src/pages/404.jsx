@@ -1,6 +1,6 @@
+import * as React from 'react';
 import { BuilderComponent, builder } from '@builder.io/react';
 import '@builder.io/widgets';
-import * as React from 'react';
 
 // TODO: enter your public API key
 builder.init('jdGaMusrVpYgdcAnAtgn');

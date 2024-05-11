@@ -1,6 +1,7 @@
 import { builder, BuilderComponent, Image } from '@builder.io/react';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Head from 'next/head';
+import React from 'react';
 import AtvImg from '../components/atv-image';
 import { TextLink } from '../components/text-link';
 import {

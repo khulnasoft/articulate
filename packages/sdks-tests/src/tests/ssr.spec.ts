@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { isRNSDK, isSSRFramework, test } from './helpers.js';
+import { isRNSDK, isSSRFramework, test } from './helpers/index.js';
 
 test.describe('SSR', () => {
   test('js enabled', async ({ page }) => {
@@ -14,6 +14,10 @@ test.describe('SSR', () => {
 
   test('js disabled', async ({ browser, packageName }) => {
     test.fail(!isSSRFramework(packageName));
+    test.fail(
+      packageName === 'angular-ssr',
+      'We are using ngOnInit to set props so we need JS enabled.'
+    );
 
     const context = await browser.newContext({
       javaScriptEnabled: false,

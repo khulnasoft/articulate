@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { Builder } from '@builder.io/sdk';
 import { jsx } from '@emotion/core';
-import { observer } from 'mobx-react';
+import { Builder } from '@builder.io/sdk';
 import React, { useRef } from 'react';
-import { getDependenciesKeyFrom } from '../helpers/getDependenciesKeyFrom';
+import { observer } from 'mobx-react';
 import { MultipleDropdowns as _MultipleDropdowns } from './MultipleDropdowns';
 import { SingleDropdown as _SingleDropdown } from './SingleDropdown';
+import { getDependenciesKeyFrom } from '../helpers/getDependenciesKeyFrom';
 
 export const Component = observer((props: any) => {
   const { expectMultipleDropdowns } = props.field.options;

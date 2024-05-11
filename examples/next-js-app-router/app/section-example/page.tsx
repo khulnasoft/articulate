@@ -1,6 +1,7 @@
-import { RenderBuilderContent } from '@/components/builder';
+import React from 'react';
 import { builder } from '@builder.io/sdk';
 import Head from 'next/head';
+import { RenderBuilderContent } from '@/components/builder';
 
 // Replace with your Public API Key
 builder.init('YJIGb4i01jvw0SRdL5Bt');

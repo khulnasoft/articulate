@@ -1,8 +1,8 @@
 import {
-  Builder,
-  BuilderBlockComponent,
-  BuilderStoreContext,
   withBuilder,
+  BuilderStoreContext,
+  BuilderBlockComponent,
+  Builder,
 } from '@builder.io/react';
 import * as React from 'react';
 import { FormBlockProps } from '../interfaces/component-props';

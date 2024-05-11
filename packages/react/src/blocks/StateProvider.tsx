@@ -1,9 +1,9 @@
 'use client';
-import { BuilderElement } from '@builder.io/sdk';
 import React, { PropsWithChildren } from 'react';
+import { BuilderElement } from '@builder.io/sdk';
 import { BuilderBlock as BuilderBlockComponent } from '../components/builder-block.component';
-import { withBuilder } from '../functions/with-builder';
 import { BuilderStoreContext } from '../store/builder-store';
+import { withBuilder } from '../functions/with-builder';
 
 interface StateProviderProps {
   builderBlock?: BuilderElement;

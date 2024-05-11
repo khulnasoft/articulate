@@ -1,18 +1,18 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { CustomReactEditorProps, fastClone } from './plugin-helpers';
+import { observable, reaction, IReactionOptions, action } from 'mobx';
+import React, { useEffect } from 'react';
+import { useObserver, useLocalStore } from 'mobx-react';
+import { Project, SmartlingApi } from './smartling';
 import {
-  Checkbox,
   CircularProgress,
-  ListItemText,
-  MenuItem,
   Select,
+  MenuItem,
+  ListItemText,
+  Checkbox,
   Typography,
 } from '@material-ui/core';
-import { IReactionOptions, action, observable, reaction } from 'mobx';
-import { useLocalStore, useObserver } from 'mobx-react';
-import React, { useEffect } from 'react';
-import { CustomReactEditorProps, fastClone } from './plugin-helpers';
-import { Project, SmartlingApi } from './smartling';
 
 function useReaction<T = any>(
   expression: () => T,

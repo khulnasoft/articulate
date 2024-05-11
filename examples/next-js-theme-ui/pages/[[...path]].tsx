@@ -1,18 +1,18 @@
-import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
-import builderConfig from '@config/builder'
-import { getLayoutProps } from '@lib/get-layout-props'
-import { resolveBuilderContent } from '@lib/resolve-builder-content'
-import { useThemeUI } from '@theme-ui/core'
-import { Themed } from '@theme-ui/mdx'
 import type {
   GetStaticPathsContext,
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
 import { NextSeo } from 'next-seo'
-import DefaultErrorPage from 'next/error'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
+import builderConfig from '@config/builder'
+import { resolveBuilderContent } from '@lib/resolve-builder-content'
+import { useThemeUI } from '@theme-ui/core'
+import Link from 'next/link'
+import { Themed } from '@theme-ui/mdx'
+import { getLayoutProps } from '@lib/get-layout-props'
+import DefaultErrorPage from 'next/error'
 
 builder.init(builderConfig.apiKey)
 

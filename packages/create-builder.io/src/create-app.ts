@@ -1,13 +1,9 @@
 import { Spinner } from 'cli-spinner';
-import { bold, cyan, dim, green } from 'colorette';
 import fs, { rename } from 'fs-extra';
 import { join } from 'path';
-import { replaceInFile } from 'replace-in-file';
+import { bold, cyan, dim, green } from 'colorette';
 import { downloadStarter } from './download';
-import { mustGetApiKey } from './login';
-import { didOpenBroswer, getEditorURL, openBuilder } from './open';
 import { Starter } from './starters';
-import { BUILD, START } from './texts';
 import { unZipBuffer } from './unzip';
 import {
   askQuestion,
@@ -19,6 +15,10 @@ import {
   setTmpDirectory,
   terminalPrompt,
 } from './utils';
+import { BUILD, START, TEST } from './texts';
+import { replaceInFile } from 'replace-in-file';
+import { mustGetApiKey } from './login';
+import { didOpenBroswer, getEditorURL, openBuilder } from './open';
 
 const starterPromises = new Map<
   Starter,

@@ -1,12 +1,12 @@
-import { Category } from './category';
 import { Billing, Payment, Shipping, ThankYou } from './checkout';
 import Breadcrumbs from './components/breadcrumbs';
 import Cart from './components/cart-sidebar';
-import CategoryAccordion from './components/category-accordion';
 import LoginModal from './components/login-modal';
 import Home from './home';
 import { MyProfile, OrderHistory } from './my-account';
 import { Product } from './product';
+import { Category } from './category';
+import CategoryAccordion from './components/category-accordion';
 
 const page = {
   get checkout() {

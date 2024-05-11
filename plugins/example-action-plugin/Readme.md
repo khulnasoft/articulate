@@ -3,7 +3,7 @@ In this example code, we define an `action shortcut` to trigger events to Google
 ## Getting started
 
 ```
-git clone git@github.com:khulnasoft/articulate.git
+git clone git@github.com:BuilderIO/builder.git
 cd builder/plugins/example-action-plugin/
 npm install
 npm run start

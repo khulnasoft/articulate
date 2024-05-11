@@ -2,20 +2,20 @@ import {
   Directive,
   EmbeddedViewRef,
   Input,
-  OnDestroy,
-  OnInit,
   Optional,
-  Renderer2,
   TemplateRef,
   ViewContainerRef,
+  OnInit,
+  OnDestroy,
+  Renderer2,
 } from '@angular/core';
-import { StateKey, TransferState, makeStateKey } from '@angular/platform-browser';
-import { NavigationEnd, Router } from '@angular/router';
-import { Builder, Subscription as BuilderSubscription } from '@builder.io/sdk';
-import { Subscription } from 'rxjs';
-import { BuilderComponentService } from '../components/builder-component/builder-component.service';
+import { makeStateKey, StateKey, TransferState } from '@angular/platform-browser';
 import { BuilderContentService } from '../services/builder-content.service';
 import { BuilderService } from '../services/builder.service';
+import { Builder, Subscription as BuilderSubscription } from '@builder.io/sdk';
+import { BuilderComponentService } from '../components/builder-component/builder-component.service';
+import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Directive({
   selector: '[builderModel]',

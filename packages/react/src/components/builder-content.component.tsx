@@ -1,14 +1,14 @@
 'use client';
+import React from 'react';
 import {
+  builder,
+  Subscription,
+  GetContentOptions,
   Builder,
   BuilderContent as Content,
-  GetContentOptions,
-  Subscription,
-  builder,
 } from '@builder.io/sdk';
-import React from 'react';
-import { applyPatchWithMinimalMutationChain } from '../functions/apply-patch-with-mutation';
 import { NoWrap } from './no-wrap';
+import { applyPatchWithMinimalMutationChain } from '../functions/apply-patch-with-mutation';
 import { VariantsProvider } from './variants-provider.component';
 
 export type BuilderContentProps<ContentType> = {

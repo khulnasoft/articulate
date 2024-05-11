@@ -1,5 +1,5 @@
-import { assign } from '../functions/assign.function';
 import { throttle } from '../functions/throttle.function';
+import { assign } from '../functions/assign.function';
 
 const camelCaseToKebabCase = (str?: string) =>
   str ? str.replace(/([A-Z])/g, g => `-${g[0].toLowerCase()}`) : '';

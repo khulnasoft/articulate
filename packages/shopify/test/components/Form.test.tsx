@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { FormBlock } from '../../react/components/Form';
 import { mockStateWithShopify } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 describe('Form', () => {
   test('Basic contact form creation', () => {

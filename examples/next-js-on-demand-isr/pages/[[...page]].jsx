@@ -1,8 +1,8 @@
+import { useRouter } from 'next/router'
 import { BuilderComponent, builder, useIsPreviewing } from '@builder.io/react'
-import builderConfig from '@config/builder'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import builderConfig from '@config/builder'
 // loading widgets dynamically to reduce bundle size, will only be included in bundle when is used in the content
 import '@builder.io/widgets/dist/lib/builder-widgets-async'
 

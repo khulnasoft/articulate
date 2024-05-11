@@ -1,7 +1,7 @@
 #!/usr/bin/env zx
 
 /**
- * This script uses the octokit SDK to approve & merge all open dependabot PRs for this khulnasoft/articulate repo.
+ * This script uses the octokit SDK to approve & merge all open dependabot PRs for this BuilderIO/builder repo.
  * It asks the user for:
  * - a query to filter the PRs by
  * - lists all PRs that match the query, how many there are, and asks the user to confirm
@@ -21,7 +21,7 @@ const octokit = new Octokit({
   auth: process.env.GITHUB_TOKEN_X,
 });
 
-console.log('Welcome to the khulnasoft/articulate dependabot PR merger!');
+console.log('Welcome to the BuilderIO/builder dependabot PR merger!');
 
 if (!process.env.GITHUB_TOKEN_X) {
   throw new Error(`GITHUB_TOKEN_X not found in .env file`);
@@ -35,7 +35,7 @@ async function getQuery() {
 
 const getPRs = async ({ isApproved }) => {
   const getQuery = isApproved =>
-    `repo:khulnasoft/articulate is:open state:open author:app/dependabot type:pr ${query} in:title `;
+    `repo:BuilderIO/builder is:open state:open author:app/dependabot type:pr ${query} in:title `;
   const { data: pullRequests } = await octokit.search.issuesAndPullRequests({
     q: getQuery(isApproved),
     per_page: 100,
@@ -240,7 +240,7 @@ async function workflowStuff() {
 
   const cancelWorkflowRun2 = async workflow => {
     try {
-      await octokit.request('POST /repos/khulnasoft/articulate/actions/runs/{run_id}/cancel', {
+      await octokit.request('POST /repos/BuilderIO/builder/actions/runs/{run_id}/cancel', {
         run_id: workflow.id,
       });
       console.log('cancelled workflow:', workflow.id);
@@ -250,7 +250,7 @@ async function workflowStuff() {
   };
 
   octokit
-    .request('GET /repos/khulnasoft/articulate/actions/runs?status=queued&branch=main&per_page=10')
+    .request('GET /repos/BuilderIO/builder/actions/runs?status=queued&branch=main&per_page=10')
     .then(x => x.data.workflow_runs.map(cancelWorkflowRun2));
 }
 

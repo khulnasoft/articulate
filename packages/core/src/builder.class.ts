@@ -1,27 +1,27 @@
-import { IncomingMessage, ServerResponse } from 'http';
-import { version } from '../package.json';
-import { Animator } from './classes/animator.class';
-import Cookies from './classes/cookies.class';
-import { BehaviorSubject } from './classes/observable.class';
-import { QueryString } from './classes/query-string.class';
-import { assign } from './functions/assign.function';
-import { SimplifiedFetchOptions, getFetch } from './functions/fetch.function';
-import { getTopLevelDomain } from './functions/get-top-level-domain';
-import { nextTick } from './functions/next-tick.function';
-import { omit } from './functions/omit.function';
-import { throttle } from './functions/throttle.function';
-import { uuid } from './functions/uuid';
 import './polyfills/custom-event-polyfill';
-import { BuilderContent } from './types/content';
+import { IncomingMessage, ServerResponse } from 'http';
+import { nextTick } from './functions/next-tick.function';
+import { QueryString } from './classes/query-string.class';
+import { version } from '../package.json';
+import { BehaviorSubject } from './classes/observable.class';
+import { getFetch, SimplifiedFetchOptions } from './functions/fetch.function';
+import { assign } from './functions/assign.function';
+import { throttle } from './functions/throttle.function';
+import { Animator } from './classes/animator.class';
 import { BuilderElement } from './types/element';
+import Cookies from './classes/cookies.class';
+import { omit } from './functions/omit.function';
+import { getTopLevelDomain } from './functions/get-top-level-domain';
+import { BuilderContent } from './types/content';
+import { uuid } from './functions/uuid';
 import { parse as urlParse } from './url';
 
 // Do not change this to a require! It throws runtime errors - rollup
 // will preserve the `require` and throw runtime errors
 import hash from 'hash-sum';
 import { toError } from './functions/to-error';
-import { ApiVersion, DEFAULT_API_VERSION } from './types/api-version';
-import { UrlLike, emptyUrl } from './url';
+import { emptyUrl, UrlLike } from './url';
+import { DEFAULT_API_VERSION, ApiVersion } from './types/api-version';
 
 export type Url = any;
 
@@ -535,7 +535,7 @@ export interface Input {
   /**
    * The type of input to use, such as 'text'
    *
-   * See all available inputs [here](https://www.builder.io/c/docs/custom-react-components#input-types)
+   * See all available inputs [here](https://www.builder.io/c/docs/custom-components-input-types)
    * and you can create your own custom input types and associated editor UIs with [plugins](https://www.builder.io/c/docs/extending/plugins)
    */
   type: string;
@@ -635,6 +635,8 @@ export interface Input {
    * Use optionally with inputs of type `reference`. Restricts the content entry picker to a specific model by name.
    */
   model?: string;
+
+  meta?: Record<string, any>;
 }
 
 /**

@@ -1,15 +1,15 @@
 import { Builder } from '@builder.io/react';
-import { accordionConfig } from '@builder.io/widgets/dist/lib/components/Accordion.config';
-import { carouselConfig } from '@builder.io/widgets/dist/lib/components/Carousel.config';
-import { masonryConfig } from '@builder.io/widgets/dist/lib/components/Masonry.config';
-import { tabsConfig } from '@builder.io/widgets/dist/lib/components/Tabs.config';
 import dynamic from 'next/dynamic';
+import { carouselConfig } from '@builder.io/widgets/dist/lib/components/Carousel.config';
+import { tabsConfig } from '@builder.io/widgets/dist/lib/components/Tabs.config';
+import { accordionConfig } from '@builder.io/widgets/dist/lib/components/Accordion.config';
+import { masonryConfig } from '@builder.io/widgets/dist/lib/components/Masonry.config';
 import { codeBlockConfig } from './code-block.config';
-import { codeSnippetsConfig } from './code-snippets.config';
 import { docsSearchConfig } from './docs-search.config';
 import { materialTableConfig } from './material-table.config';
-import { materialTabsConfig } from './material-tabs.config';
 import { tooltipConfig } from './tooltip.config';
+import { materialTabsConfig } from './material-tabs.config';
+import { codeSnippetsConfig } from './code-snippets.config';
 
 Builder.registerComponent(
   dynamic(() =>

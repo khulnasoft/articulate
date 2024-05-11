@@ -12,7 +12,7 @@ export interface Starter {
 export const STARTERS: Starter[] = [
   {
     name: 'Nextjs',
-    repo: 'khulnasoft/articulate',
+    repo: 'BuilderIO/builder',
     template: 'starter',
     description: 'Basic React app with nextjs server-side rendering (SSG/ISR)',
     docs: 'https://www.builder.io/blog/visual-next-js',
@@ -20,7 +20,7 @@ export const STARTERS: Starter[] = [
   },
   {
     name: 'React',
-    repo: 'khulnasoft/articulate',
+    repo: 'BuilderIO/builder',
     template: 'starter',
     description: 'Simple create-react-app using builder',
     docs: 'https://www.builder.io/blog/drag-drop-react',

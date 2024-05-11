@@ -1,8 +1,10 @@
+import { Links, Meta, Scripts, useCatch, useLoaderData, useParams } from '@remix-run/react';
+import type { LoaderFunction } from '@remix-run/node';
 import { BuilderComponent, builder } from '@builder.io/react';
 import { getAPIKey, getProps } from '@e2e/tests';
-import type { LoaderFunction } from '@remix-run/node';
-import { Links, Meta, Scripts, useCatch, useLoaderData, useParams } from '@remix-run/react';
 import { useEffect } from 'react';
+
+import '@builder.io/widgets';
 
 builder.init(getAPIKey());
 

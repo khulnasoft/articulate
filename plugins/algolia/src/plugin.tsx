@@ -1,8 +1,8 @@
-import appState from '@builder.io/app-context';
 import { Builder } from '@builder.io/react';
+import appState from '@builder.io/app-context';
 import { pluginId } from './constants';
-import { createWebhook } from './create-web-hook';
 import { syncToAlgolia } from './sync-to-algolia';
+import { createWebhook } from './create-web-hook';
 
 Builder.register('plugin', {
   id: pluginId,

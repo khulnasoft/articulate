@@ -2,14 +2,14 @@
  * @jest-environment jsdom
  */
 
-import { Builder, builder } from '@builder.io/sdk';
-import { render } from '@testing-library/react';
 import * as React from 'react';
 import { renderToString } from 'react-dom/server';
-import * as reactTestRenderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
+import { Builder, builder } from '@builder.io/sdk';
 import { BuilderPage } from '../src/builder-react';
+import { el, block } from './functions/render-block';
+import * as reactTestRenderer from 'react-test-renderer';
 import { getBuilderPixel } from '../src/functions/get-builder-pixel';
-import { block, el } from './functions/render-block';
 
 builder.init('null');
 

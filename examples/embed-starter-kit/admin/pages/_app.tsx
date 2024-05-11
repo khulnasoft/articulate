@@ -1,6 +1,6 @@
-import { CssBaseline, ThemeProvider, createTheme } from '@material-ui/core'
-import Header from 'components/Header'
 import type { AppProps } from 'next/app'
+import Header from 'components/Header'
+import { CssBaseline, ThemeProvider, createTheme } from '@material-ui/core'
 const theme = createTheme({
   palette: {
     primary: {

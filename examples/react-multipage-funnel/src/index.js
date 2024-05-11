@@ -1,6 +1,7 @@
-import { BuilderComponent, BuilderContent, builder } from '@builder.io/react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Link, Route, Switch, useHistory, useRouteMatch } from 'react-router-dom';
+import { Switch, Route, BrowserRouter, Link, useHistory, useRouteMatch } from 'react-router-dom';
+import { BuilderComponent, BuilderContent, builder } from '@builder.io/react';
 
 import './index.css';
 

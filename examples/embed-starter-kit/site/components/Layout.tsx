@@ -1,9 +1,9 @@
+import { Header } from './Header'
 import { BuilderContent } from '@builder.io/react'
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material'
+import { themes } from '../helpers/themes'
 import Box from '@mui/material/Box'
 import { generatePalette } from 'helpers/generate-palette'
-import { themes } from '../helpers/themes'
-import { Header } from './Header'
 
 /**
  * Global layout

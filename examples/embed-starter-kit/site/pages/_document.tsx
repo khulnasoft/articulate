@@ -1,12 +1,12 @@
-import createEmotionServer from '@emotion/server/create-instance'
+import React from 'react'
 import Document, {
-  DocumentContext,
-  Head,
   Html,
+  Head,
   Main,
   NextScript,
+  DocumentContext,
 } from 'next/document'
-import React from 'react'
+import createEmotionServer from '@emotion/server/create-instance'
 import { createEmotionCache } from '../helpers/create-emotion-cache'
 
 class MyDocument extends Document {

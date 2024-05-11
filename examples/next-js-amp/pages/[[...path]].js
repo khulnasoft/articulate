@@ -1,3 +1,4 @@
+import React from 'react';
 import { builder } from '@builder.io/react';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';

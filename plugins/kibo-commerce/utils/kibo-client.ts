@@ -1,3 +1,5 @@
+import currency from 'currency.js';
+
 type PerformSearchParams = {
   gqlQuery: string;
   query?: string;

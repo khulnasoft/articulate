@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import appState from '@builder.io/app-context';
 import { jsx } from '@emotion/core';
+import appState from '@builder.io/app-context';
 import { Button } from '@material-ui/core';
 
 export function showJobNotification(jobId: string) {

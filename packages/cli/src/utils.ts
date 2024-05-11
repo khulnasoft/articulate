@@ -1,7 +1,7 @@
-import { ChildProcess, spawn } from 'child_process';
 import fse from 'fs-extra';
-import path from 'path';
 import traverse from 'traverse';
+import { ChildProcess, spawn } from 'child_process';
+import path from 'path';
 
 const childrenProcesses: ChildProcess[] = [];
 

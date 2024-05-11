@@ -1,39 +1,14 @@
 import type {
   BuilderContextInterface,
+  RegisteredComponent,
   RegisteredComponents,
 } from '../../context/types.js';
 import { evaluate } from '../../functions/evaluate/index.js';
+import { extractTextStyles } from '../../functions/extract-text-styles.js';
 import { getProcessedBlock } from '../../functions/get-processed-block.js';
+import { getStyle } from '../../functions/get-style.js';
 import type { BuilderBlock } from '../../types/builder-block.js';
 import type { RepeatData } from './types.js';
-
-/**
- * https://developer.mozilla.org/en-US/docs/Glossary/Empty_element
- */
-const EMPTY_HTML_ELEMENTS = [
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'keygen',
-  'link',
-  'meta',
-  'param',
-  'source',
-  'track',
-  'wbr',
-];
-
-export const isEmptyHtmlElement = (tagName: unknown) => {
-  return (
-    typeof tagName === 'string' &&
-    EMPTY_HTML_ELEMENTS.includes(tagName.toLowerCase())
-  );
-};
 
 export const getComponent = ({
   block,
@@ -93,6 +68,7 @@ export const getRepeatItemData = ({
     rootState: context.rootState,
     rootSetState: context.rootSetState,
     context: context.context,
+    enableCache: true,
   });
 
   if (!Array.isArray(itemsArray)) {
@@ -118,4 +94,44 @@ export const getRepeatItemData = ({
   }));
 
   return repeatArray;
+};
+
+export const getInheritedStyles = ({
+  block,
+  context,
+}: {
+  block: BuilderBlock;
+  context: BuilderContextInterface;
+}) => {
+  const style = getStyle({ block, context });
+  if (!style) {
+    return {};
+  }
+  return extractTextStyles(style);
+};
+
+export const shouldPassLinkComponent = (
+  block: RegisteredComponent | null | undefined
+) => {
+  return (
+    block &&
+    (block.isRSC ||
+      [
+        'Core:Button',
+        'Symbol',
+        'Columns',
+        'Form:Form',
+        'Builder: Tabs',
+      ].includes(block.name))
+  );
+};
+
+export const shouldPassRegisteredComponents = (
+  block: RegisteredComponent | null | undefined
+) => {
+  return (
+    block &&
+    (block.isRSC ||
+      ['Symbol', 'Columns', 'Form:Form', 'Builder: Tabs'].includes(block.name))
+  );
 };

@@ -1,5 +1,5 @@
-import requests from '../api/requests';
 import page from '../pages/factory';
+import requests from '../api/requests';
 import generator from '../utils/data-generator';
 
 context(['regression'], 'User registration', () => {

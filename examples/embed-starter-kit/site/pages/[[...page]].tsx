@@ -1,11 +1,11 @@
-import { Builder, BuilderComponent, builder } from '@builder.io/react'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+import { useRouter } from 'next/router'
+import { BuilderComponent, Builder, builder } from '@builder.io/react'
 import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { getLayoutProps } from '../helpers/get-layout-props'
 import { builderEditing } from '../helpers/builder-editing-hook'
 import '../helpers/builder-settings'
-import { getLayoutProps } from '../helpers/get-layout-props'
 
 export async function getStaticProps({
   params,

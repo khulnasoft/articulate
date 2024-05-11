@@ -1,11 +1,11 @@
 import Cors from 'cors'
-import { minifyRecords, table } from 'helpers/airtable'
-import auth0 from 'helpers/auth0'
-import configureSSO from 'helpers/configure-sso'
-import type { NextApiRequest, NextApiResponse } from 'next'
-import addNewModel from '../../../helpers/add-new-model'
-import createNewSpace from '../../../helpers/create-new-space'
 import initMiddleware from '../../../helpers/init-middleware'
+import createNewSpace from '../../../helpers/create-new-space'
+import addNewModel from '../../../helpers/add-new-model'
+import type { NextApiRequest, NextApiResponse } from 'next'
+import auth0 from 'helpers/auth0'
+import { table, minifyRecords } from 'helpers/airtable'
+import configureSSO from 'helpers/configure-sso'
 
 // Initialize the cors middleware
 const cors = initMiddleware(

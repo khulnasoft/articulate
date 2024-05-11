@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { Builder, BuilderElement, builder } from '@builder.io/sdk';
 import { jsx } from '@emotion/core';
 import React, { PropsWithChildren } from 'react';
+import { BuilderElement, builder, Builder } from '@builder.io/sdk';
+import { BuilderStoreContext } from '../store/builder-store';
 import { BuilderComponent } from '../components/builder-component.component';
 import { withBuilder } from '../functions/with-builder';
-import { BuilderStoreContext } from '../store/builder-store';
 
 export interface RouterProps {
   model?: string;

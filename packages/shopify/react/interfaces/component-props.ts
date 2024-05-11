@@ -1,4 +1,4 @@
-import { BuilderElement, BuilderStore } from '@builder.io/react';
+import { BuilderStore, BuilderElement } from '@builder.io/react';
 
 export interface AssignBlockProps {
   expression?: string;

@@ -94,9 +94,9 @@ To uninstall your plugin,remove it in the plugins UI
 
 Try creating a custom [model](https://builder.io/c/docs/guides/getting-started-with-models), [component](https://builder.io/c/docs/custom-react-components), or [symbol](https://builder.io/c/docs/guides/symbols) using an Emporix field, and edit away!
 
-![Configure Emporix plugin](https://res.cloudinary.com/saas-ag/image/upload/v1699597606/emporix/khulnasoft/articulate-connection.gif)
+![Configure Emporix plugin](https://res.cloudinary.com/saas-ag/image/upload/v1699597606/emporix/builderio/builder-connection.gif)
 
-![Seeing your plugin in the editor example gif](https://res.cloudinary.com/saas-ag/image/upload/v1699597608/emporix/khulnasoft/articulate-emporix-fields.gif)
+![Seeing your plugin in the editor example gif](https://res.cloudinary.com/saas-ag/image/upload/v1699597608/emporix/builderio/builder-emporix-fields.gif)
 
 ### Frameworks
 

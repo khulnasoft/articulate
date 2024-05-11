@@ -1,7 +1,7 @@
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { WrapperTag } from '../../react/components/WrapperTag';
-import { builderComponentIdRegex, el, mockStateWithShopify, text } from '../modules/helpers';
+import { mockStateWithShopify, text, builderComponentIdRegex, el } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 const conditionalTags = [
   {

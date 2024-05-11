@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
+import React from 'react'
+import { CustomEditorProps } from '../interfaces/custom-editor'
+import { useObserver } from 'mobx-react'
 import { Button, IconButton, Tooltip } from '@material-ui/core'
 import { Create } from '@material-ui/icons'
-import { useObserver } from 'mobx-react'
-import { CustomEditorProps } from '../interfaces/custom-editor'
 import { Row } from './row'
 
 /**

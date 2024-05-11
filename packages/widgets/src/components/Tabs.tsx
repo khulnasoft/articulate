@@ -1,5 +1,5 @@
-import { BuilderBlocks } from '@builder.io/react';
 import * as React from 'react';
+import { BuilderBlocks } from '@builder.io/react';
 
 // TODO: manual typings and documentation for this with typedoc and in builder guides pages
 type ElementType = any;

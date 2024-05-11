@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import Avatar from '../components/avatar';
 import CoverImage from '../components/cover-image';
+import Link from 'next/link';
 
 export default function PostCard({ title, coverImage, author, slug, intro }) {
   return (

@@ -1,8 +1,8 @@
 import { BuilderComponent, builder } from '@builder.io/react';
 import type { BuilderContent } from '@builder.io/sdk';
 import { Builder } from '@builder.io/sdk';
-import type { LoaderFunction } from '@remix-run/node';
 import { Links, Meta, Scripts, useCatch, useLoaderData } from '@remix-run/react';
+import type { LoaderFunction } from '@remix-run/node';
 import builderConfig from '../../builderConfig.json';
 
 builder.init(builderConfig.apiKey);

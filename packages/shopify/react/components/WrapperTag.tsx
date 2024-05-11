@@ -1,10 +1,10 @@
-import {
-  BuilderBlockComponent,
-  BuilderElement,
-  BuilderStore,
-  withBuilder,
-} from '@builder.io/react';
 import * as React from 'react';
+import {
+  withBuilder,
+  BuilderStore,
+  BuilderElement,
+  BuilderBlockComponent,
+} from '@builder.io/react';
 
 interface ConditionalTag extends Omit<BuilderElement, 'children'> {
   meta: { renderIf: string };

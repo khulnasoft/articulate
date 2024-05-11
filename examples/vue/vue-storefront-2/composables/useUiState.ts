@@ -1,4 +1,4 @@
-import { computed, reactive } from '@nuxtjs/composition-api';
+import { reactive, computed } from '@nuxtjs/composition-api';
 
 const state = reactive({
   isCartSidebarOpen: false,

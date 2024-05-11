@@ -1,6 +1,6 @@
 'use client';
-import { BuilderElement } from '@builder.io/sdk';
 import React from 'react';
+import { BuilderElement } from '@builder.io/sdk';
 import { BuilderBlockComponent } from '../../builder-react';
 import { withBuilder } from '../../functions/with-builder';
 

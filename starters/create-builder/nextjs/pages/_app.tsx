@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 
-import { builder, Builder, withChildren } from '@builder.io/react';
 import type { AppProps } from 'next/app';
+import { builder, Builder, withChildren } from '@builder.io/react';
 import { Header } from '../components/Header';
 import { ShoesViewer } from '../components/ShoesViewer';
 import { SourceCodeLink } from '../components/SourceCodeLink';

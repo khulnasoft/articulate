@@ -1,5 +1,5 @@
-import appState from '@builder.io/app-context';
 import pkg from '../package.json';
+import appState from '@builder.io/app-context';
 import { getTranslationModel } from './model-template';
 
 export type Project = {
@@ -91,6 +91,28 @@ export class SmartlingApi {
       body: JSON.stringify({
         id,
         model,
+      }),
+    });
+  }
+
+  removeContentFromTranslationJob({
+    contentId,
+    contentModel,
+    translationJobId,
+    translationModel,
+  }: {
+    contentId: string;
+    contentModel: string;
+    translationJobId: string;
+    translationModel: string;
+  }) {
+    return this.request('remove-content-from-job', {
+      method: 'POST',
+      body: JSON.stringify({
+        contentId,
+        contentModel,
+        translationJobId,
+        translationModel,
       }),
     });
   }

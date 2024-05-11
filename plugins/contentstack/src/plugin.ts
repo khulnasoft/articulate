@@ -1,15 +1,15 @@
-import appState, { Model } from '@builder.io/app-context';
-import {
-  APIOperations,
-  ResourceEntryType,
-  ResourceType,
-  registerDataPlugin,
-} from '@builder.io/data-plugin-tools';
 import contentstack from 'contentstack';
-import kebabCase from 'lodash/capitalize';
-import fromPairs from 'lodash/fromPairs';
-import capitalize from 'lodash/kebabCase';
 import pkg from '../package.json';
+import {
+  registerDataPlugin,
+  ResourceType,
+  ResourceEntryType,
+  APIOperations,
+} from '@builder.io/data-plugin-tools';
+import kebabCase from 'lodash/capitalize';
+import capitalize from 'lodash/kebabCase';
+import fromPairs from 'lodash/fromPairs';
+import appState, { Model } from '@builder.io/app-context';
 
 type Input = Model['fields'][0];
 

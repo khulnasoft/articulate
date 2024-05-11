@@ -1,17 +1,17 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin as registerPlugin } from '@builder.io/commerce-plugin-tools';
-import { getTranslateableFields } from '@builder.io/utils';
-import stringify from 'fast-json-stable-stringify';
-import hash from 'object-hash';
 import pkg from '../package.json';
-import { Phrase } from './phrase';
+import appState from '@builder.io/app-context';
 import {
-  fastClone,
   registerContentAction,
   registerContextMenuAction,
+  fastClone,
   registerEditorOnLoad,
 } from './plugin-helpers';
-import { getLangPicks, showJobNotification, showOutdatedNotifications } from './snackbar-utils';
+import { Phrase, Project } from './phrase';
+import { showJobNotification, showOutdatedNotifications, getLangPicks } from './snackbar-utils';
+import { getTranslateableFields } from '@builder.io/utils';
+import hash from 'object-hash';
+import stringify from 'fast-json-stable-stringify';
 // translation status that indicate the content is being queued for translations
 const enabledTranslationStatuses = ['pending', 'local'];
 
@@ -29,6 +29,10 @@ registerPlugin(
         name: 'password',
         type: 'password',
         required: true,
+      },
+      {
+        name: 'isUSDataCenterAccount',
+        type: 'boolean',
       },
       // allow developer to override callback host , e.g ngrok for local development
       ...(appState.user.isBuilderAdmin
@@ -156,7 +160,7 @@ registerPlugin(
             settings.get('callbackHost')
           );
           appState.globalState.hideGlobalBlockingLoading();
-          showJobNotification(project.uid);
+          showJobNotification(project.uid, settings.get('isUSDataCenterAccount'));
         }
       },
     });

@@ -1,16 +1,16 @@
 'use strict';
-import * as React from 'react';
-import * as reactDom from 'react-dom';
 import './polyfills';
+import * as reactDom from 'react-dom';
+import * as React from 'react';
 // import * as builderReact from '@builder.io/react'
-import * as mst from '@builder.io/mobx-state-tree';
-import * as builder from '@builder.io/sdk';
 import * as emotionCore from '@emotion/core';
 import * as emotionStyled from '@emotion/styled';
-import * as mui from '@material-ui/core';
-import * as muiIcons from '@material-ui/icons';
 import * as mobx from 'mobx';
 import * as mobxReact from 'mobx-react';
+import * as mst from '@builder.io/mobx-state-tree';
+import * as mui from '@material-ui/core';
+import * as muiIcons from '@material-ui/icons';
+import * as builder from '@builder.io/sdk';
 
 const context = {
   user: {
@@ -27,8 +27,8 @@ const context = {
   },
 };
 
-import 'systemjs/dist/extras/named-register.js';
 import 'systemjs/dist/system.js';
+import 'systemjs/dist/extras/named-register.js';
 
 // Ugh, webpack...
 export const system: typeof System = eval('System');

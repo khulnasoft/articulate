@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { useEffect, useState } from 'react';
-import { canDisableClear } from '../helpers/canDisableClear';
-import { haveDependenciesChanged } from '../helpers/dependenciesHelper';
-import { getDependenciesKeyFrom } from '../helpers/getDependenciesKeyFrom';
+import React, { useEffect, useState } from 'react';
 import { orchestrateSelections } from '../helpers/selectionsOrchestrator';
-import { IOption } from '../models/IOption';
 import { Dropdown } from './Dropdown';
+import { getDependenciesKeyFrom } from '../helpers/getDependenciesKeyFrom';
 import { NothingToSelect } from './NothingToSelect';
+import { haveDependenciesChanged } from '../helpers/dependenciesHelper';
+import { IOption } from '../models/IOption';
+import { canDisableClear } from '../helpers/canDisableClear';
 
 export const SingleDropdown = (props: any) => {
   const [dropdownOptions, setDropdownOptions] = useState<IOption[]>([]);

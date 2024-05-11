@@ -1,5 +1,5 @@
 {
-  "name": "@articulate/root",
+  "name": "@builder.io/root",
   "private": true,
   "workspaces": [
     "packages",
@@ -16,7 +16,7 @@
     "dotenv": "^16.0.3",
     "nx": "^16.6.0",
     "nx-cloud": "^16.2.0",
-    "octokit": "^3.1.2",
+    "octokit": "^2.0.14",
     "zx": "7.2.1"
   },
   "license": "MIT",

@@ -1,6 +1,6 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
 import { Resource } from '@builder.io/commerce-plugin-tools/dist/types/interfaces/resource';
+import appState from '@builder.io/app-context';
 
 interface Model {
   name: string;

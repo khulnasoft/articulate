@@ -1,3 +1,5 @@
+import { BuilderElement } from '@builder.io/sdk'
+
 export const examplePageTemplate = {
   name: 'New page',
   query: [{ property: 'urlPath', operator: 'is', value: '/' }],

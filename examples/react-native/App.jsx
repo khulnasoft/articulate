@@ -1,4 +1,4 @@
-import { RenderContent, getContent, isPreviewing } from '@builder.io/sdk-react-native';
+import { Content, fetchOneEntry, isPreviewing } from '@builder.io/sdk-react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
@@ -42,7 +42,7 @@ const BuilderContent = ({ route }) => {
   const [content, setContent] = useState(undefined);
 
   useEffect(() => {
-    getContent({
+    fetchOneEntry({
       model: 'page',
       apiKey: BUILDER_API_KEY,
       options: route.params,
@@ -72,7 +72,7 @@ const BuilderContent = ({ route }) => {
             flexDirection: 'column',
           }}
         >
-          <RenderContent
+          <Content
             apiKey={BUILDER_API_KEY}
             model="page"
             content={content}

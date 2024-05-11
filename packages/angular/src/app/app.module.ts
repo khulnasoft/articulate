@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BuilderModule } from './modules/builder/builder.module';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BuilderService } from './modules/builder/services/builder.service';
 
 @NgModule({

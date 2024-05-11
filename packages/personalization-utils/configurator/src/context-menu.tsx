@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import type { Input } from '@builder.io/sdk';
 import {
   ControlledMenu,
@@ -8,8 +10,6 @@ import {
   SubMenu,
   useMenuState,
 } from '@szhsin/react-menu';
-import Cookies from 'js-cookie';
-import React, { useEffect, useState } from 'react';
 
 import { useContextMenu } from './use-context-menu';
 

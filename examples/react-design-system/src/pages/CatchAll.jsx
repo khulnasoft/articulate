@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
+import { NotFound } from '../components/NotFound';
 import { BuilderComponent, useIsPreviewing } from '@builder.io/react';
 import { CircularProgress } from '@material-ui/core';
-import { useState } from 'react';
-import { NotFound } from '../components/NotFound';
 
 // Match any page we don't have a hardcoded URL for and check
 // Builder for a matching page. Otherwise show our 404 page

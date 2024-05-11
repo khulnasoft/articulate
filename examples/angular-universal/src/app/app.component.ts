@@ -1,6 +1,7 @@
-import { Component, Inject, Input, Optional } from '@angular/core';
 import { BuilderBlock } from '@builder.io/angular';
+import { Component, Input } from '@angular/core';
 import { RESPONSE } from '@nguniversal/express-engine/tokens';
+import { Optional, Inject } from '@angular/core';
 import { Response } from 'express';
 
 @Component({

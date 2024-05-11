@@ -1,18 +1,18 @@
-import appState from '@builder.io/app-context';
 import { Builder } from '@builder.io/react';
-import capitalize from 'lodash/capitalize';
-import pluralize from 'pluralize';
-import React from 'react';
-import { onEditorLoad } from './actions/on-editor-load';
-import { ErrorBoundary } from './components/error-boundary';
-import { PickResourceListProps, PickResourcesListButton } from './editors/ResourcesList';
 import {
   ResourcePickerProps,
   ResourcesPickerButton,
   ResourcesPickerButtonProps,
 } from './editors/ResourcesPicker';
-import { BuilderRequest } from './interfaces/builder-request';
+import { PickResourcesListButton, PickResourceListProps } from './editors/ResourcesList';
+import appState from '@builder.io/app-context';
+import React from 'react';
+import { onEditorLoad } from './actions/on-editor-load';
 import { Resource } from './interfaces/resource';
+import { BuilderRequest } from './interfaces/builder-request';
+import { ErrorBoundary } from './components/error-boundary';
+import capitalize from 'lodash/capitalize';
+import pluralize from 'pluralize';
 // todo move to sdk
 interface OnSaveActions {
   updateSettings(partal: Record<string, any>): Promise<void>;
@@ -151,10 +151,10 @@ export const registerCommercePlugin = async (
   await registerEditors();
 };
 
+export { Resource } from './interfaces/resource';
+export { BuilderRequest } from './interfaces/builder-request';
 export {
-  ResourcePickerProps,
   ResourcePreviewCell,
+  ResourcePickerProps,
   ResourcePreviewCellProps,
 } from './editors/ResourcesPicker';
-export { BuilderRequest } from './interfaces/builder-request';
-export { Resource } from './interfaces/resource';

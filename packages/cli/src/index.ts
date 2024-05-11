@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import chalk from 'chalk';
 import program from 'commander';
+import chalk from 'chalk';
 import { importSpace, newSpace } from './admin-sdk';
 import { integrateWithLocalCodebase } from './integrate';
 const figlet = require('figlet');

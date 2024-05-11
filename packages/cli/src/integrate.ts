@@ -1,7 +1,9 @@
-import chalk from 'chalk';
+import { installPackage, writeFile } from './utils';
 import fse from 'fs-extra';
 import path from 'path';
-import { IS_YARN, installPackage, writeFile } from './utils';
+import { IS_YARN } from './utils';
+import open from 'open';
+import chalk from 'chalk';
 interface IntegrateOptions {
   apiKey: string;
   model: string;

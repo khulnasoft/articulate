@@ -1,13 +1,13 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin as registerPlugin } from '@builder.io/commerce-plugin-tools';
 import pkg from '../package.json';
+import appState from '@builder.io/app-context';
 import {
-  fastClone,
-  getIframeHTMLContent,
   getSEOReviewModel,
   getSEOReviewModelTemplate,
   registerContentAction,
+  getIframeHTMLContent,
   showReviewNotifications,
+  fastClone,
 } from './utils';
 
 /**

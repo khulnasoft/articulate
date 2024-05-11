@@ -1,8 +1,8 @@
 'use client';
-import { BuilderElement } from '@builder.io/sdk';
 import React from 'react';
-import { BuilderBlock as BuilderBlockComponent } from '../components/builder-block.component';
+import { BuilderElement } from '@builder.io/sdk';
 import { withBuilder } from '../functions/with-builder';
+import { BuilderBlock as BuilderBlockComponent } from '../components/builder-block.component';
 
 export interface FragmentProps {
   builderBlock?: BuilderElement;

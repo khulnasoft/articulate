@@ -1,8 +1,8 @@
-import builder, { BuilderComponent, BuilderContent } from '@builder.io/react';
-import Drawer from '@material-ui/core/Drawer';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useState } from 'react';
+import Drawer from '@material-ui/core/Drawer';
 import { Link } from 'react-router-dom';
+import builder, { BuilderComponent, BuilderContent } from '@builder.io/react';
 import { Cart } from './Cart';
 
 const useStyles = makeStyles(theme => ({

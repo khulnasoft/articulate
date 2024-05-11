@@ -1,8 +1,8 @@
-import appState from '@builder.io/app-context';
 import { registerDataPlugin } from '@builder.io/data-plugin-tools';
-import contentful from 'contentful';
-import qs from 'qs';
 import pkg from '../package.json';
+import contentful from 'contentful';
+import appState from '@builder.io/app-context';
+import qs from 'qs';
 
 const pluginId = pkg.name;
 const metaFields = ['environment', 'space', 'revision', 'type'];

@@ -1,20 +1,20 @@
-import { theme } from '@/constants/theme';
 import {
   getCookie,
   getQueryParam,
   setCookie,
 } from '@/scripts/init-referrer-cookie';
-import { BuilderBlocks } from '@builder.io/react';
-import { Builder } from '@builder.io/sdk';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import dedent from 'dedent';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import useEventListener from 'use-typed-event-listener';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/light-async';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript';
 import html from 'react-syntax-highlighter/dist/cjs/languages/hljs/xml';
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/light-async';
-import oneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark';
 import githubGist from 'react-syntax-highlighter/dist/cjs/styles/hljs/github-gist';
-import useEventListener from 'use-typed-event-listener';
+import oneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark';
+import { theme } from '@/constants/theme';
+import { Builder } from '@builder.io/sdk';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import { BuilderBlocks } from '@builder.io/react';
 
 const camelCase = (str: string) =>
   str.replace(/-([a-z])/g, (match) => match[1].toUpperCase());

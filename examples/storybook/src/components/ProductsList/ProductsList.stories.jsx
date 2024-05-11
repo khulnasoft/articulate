@@ -1,6 +1,7 @@
-import { getDefaultProps } from '@builder.io/storybook';
+import React from 'react';
 import { ProductsList } from './ProductsList';
 import { ProductsListBuilderConfig } from './ProductsList.builder';
+import { getDefaultProps } from '@builder.io/storybook';
 
 const props = getDefaultProps(ProductsListBuilderConfig);
 

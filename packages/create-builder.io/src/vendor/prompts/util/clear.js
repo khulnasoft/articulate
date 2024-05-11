@@ -1,5 +1,5 @@
-import { cursor, erase } from 'sisteransi';
 import strip from './strip';
+import { erase, cursor } from 'sisteransi';
 
 const width = str => [...strip(str)].length;
 

@@ -1,4 +1,5 @@
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { getBuilderStaticPaths } from '../functions/get-builder-static-paths';
 import { getBuilderStaticProps } from '../functions/get-builder-static-props';
 import LandingPage from './[...page]';
 

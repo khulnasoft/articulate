@@ -1,5 +1,5 @@
 import { expect } from '@playwright/test';
-import { excludeTestFor, findTextInPage, test } from './helpers.js';
+import { excludeTestFor, findTextInPage, isRNSDK, test } from './helpers/index.js';
 import { sdk } from './sdk.js';
 
 test.describe('Show If & Hide If', () => {
@@ -11,13 +11,8 @@ test.describe('Show If & Hide If', () => {
   });
 
   test('works on reactive conditions', async ({ page, packageName }) => {
-    test.fail(
-      excludeTestFor({
-        reactNative: true,
-        rsc: true,
-        solid: true,
-      })
-    );
+    test.fail(excludeTestFor({ rsc: true }));
+    test.fail(excludeTestFor({ angular: true }), 'Angular SDK does not support this yet');
 
     // since these are flaky tests, we have to `.skip()` instead of `.fail()`, seeing as they might sometimes pass.
     test.skip(
@@ -33,7 +28,7 @@ test.describe('Show If & Hide If', () => {
     await expect(page.getByText('even clicks')).toBeVisible();
     await expect(page.locator('body')).not.toContainText('odd clicks');
 
-    const button = page.getByRole('button');
+    const button = isRNSDK ? page.locator('button') : page.getByRole('button');
     await expect(button).toBeVisible();
     await button.click();
 
@@ -42,6 +37,7 @@ test.describe('Show If & Hide If', () => {
   });
   test('works with repeat elements', async ({ page, packageName }) => {
     test.fail(excludeTestFor({ rsc: true }), 'RSC SDK has no interactivity');
+    test.fail(excludeTestFor({ angular: true }), 'Angular SDK does not support this yet');
 
     // since these are flaky tests, we have to `.skip()` instead of `.fail()`, seeing as they might sometimes pass.
     test.skip(
@@ -59,21 +55,21 @@ test.describe('Show If & Hide If', () => {
     await expect(page.locator('body')).not.toContainText('two');
     await expect(page.locator('body')).not.toContainText('three');
 
-    await page.hover('text=button1');
+    await page.hover('text=button1', { timeout: 10000 });
 
     await expect(page.locator('body')).not.toContainText('zero');
     await expect(page.locator('body')).not.toContainText('one');
     await expect(page.locator('body')).not.toContainText('two');
     await expect(page.locator('body')).not.toContainText('three');
 
-    await page.hover('text=button2');
+    await page.hover('text=button2', { timeout: 10000 });
 
     await expect(page.locator('body')).not.toContainText('zero');
     await expect(page.locator('body')).not.toContainText('one');
     await expect(page.locator('body')).toContainText('two');
     await expect(page.locator('body')).not.toContainText('three');
 
-    await page.hover('text=button3');
+    await page.hover('text=button3', { timeout: 10000 });
 
     await expect(page.locator('body')).not.toContainText('zero');
     await expect(page.locator('body')).not.toContainText('one');

@@ -1,5 +1,5 @@
-import { Builder } from '@builder.io/react'
 import dynamic from 'next/dynamic'
+import { Builder } from '@builder.io/react'
 
 Builder.registerComponent(
   dynamic(() => import('./dynamic-columns')),

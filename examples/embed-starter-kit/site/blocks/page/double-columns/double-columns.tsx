@@ -1,10 +1,11 @@
-import { Image } from '@builder.io/react'
+import React from 'react'
+import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
+import { Image } from '@builder.io/react'
 
 export default function DoubleColumns(props: any) {
   const { image1, image2, text1, text2 } = props

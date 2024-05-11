@@ -1,28 +1,32 @@
-import appState from '@builder.io/app-context';
 import {
   registerCommercePlugin as registerPlugin,
   Resource,
 } from '@builder.io/commerce-plugin-tools';
-import { Builder } from '@builder.io/react';
-import { getTranslateableFields } from '@builder.io/utils';
-import stringify from 'fast-json-stable-stringify';
-import isEqual from 'lodash/isEqual';
-import uniq from 'lodash/uniq';
-import hash from 'object-hash';
-import React from 'react';
 import pkg from '../package.json';
-import { getTranslationModel, getTranslationModelTemplate } from './model-template';
+import appState from '@builder.io/app-context';
+import uniq from 'lodash/uniq';
+import isEqual from 'lodash/isEqual';
 import {
-  CustomReactEditorProps,
-  fastClone,
+  getTranslationModelTemplate,
+  getTranslationModel,
+  translationModelName,
+} from './model-template';
+import {
   registerBulkAction,
   registerContentAction,
   registerContextMenuAction,
+  CustomReactEditorProps,
+  fastClone,
   registerEditorOnLoad,
 } from './plugin-helpers';
-import { Project, SmartlingApi } from './smartling';
 import { SmartlingConfigurationEditor } from './smartling-configuration-editor';
+import { SmartlingApi, Project } from './smartling';
 import { showJobNotification, showOutdatedNotifications } from './snackbar-utils';
+import { Builder } from '@builder.io/react';
+import React from 'react';
+import { getTranslateableFields } from '@builder.io/utils';
+import hash from 'object-hash';
+import stringify from 'fast-json-stable-stringify';
 // translation status that indicate the content is being queued for translations
 const enabledTranslationStatuses = ['pending', 'local'];
 
@@ -349,6 +353,29 @@ registerPlugin(
         // https://dashboard.smartling.com/app/projects/0e6193784/strings/jobs/schqxtpcnxix
         const smartlingFile = `https://dashboard.smartling.com/app/projects/${translationBatch.projectId}/strings/jobs/${translationBatch.translationJobUid}`;
         window.open(smartlingFile, '_blank', 'noreferrer,noopener');
+      },
+    });
+
+    registerContentAction({
+      label: 'Remove from translation job',
+      showIf(content, model) {
+        const translationModel = getTranslationModel();
+        return (
+          model.name !== translationModel.name && Boolean(content.meta.get('translationJobId'))
+        );
+      },
+      async onClick(content) {
+        appState.globalState.showGlobalBlockingLoading();
+
+        await api.removeContentFromTranslationJob({
+          contentId: content.id,
+          contentModel: appState.designerState.editingModel.name,
+          translationJobId: content.meta.get('translationJobId'),
+          translationModel: translationModelName,
+        });
+
+        appState.globalState.hideGlobalBlockingLoading();
+        appState.snackBar.show('Removed from translation job.');
       },
     });
 

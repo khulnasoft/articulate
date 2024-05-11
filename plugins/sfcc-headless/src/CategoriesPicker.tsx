@@ -1,25 +1,27 @@
 /** @jsx jsx */
-import {
-  Resource,
-  ResourcePickerProps,
-  ResourcePreviewCell,
-} from '@builder.io/commerce-plugin-tools';
 import { jsx } from '@emotion/core';
 import {
   CircularProgress,
+  InputAdornment,
+  TextField,
+  Typography,
   ExpansionPanel,
   ExpansionPanelDetails,
   ExpansionPanelSummary,
+  Button,
   IconButton,
-  TextField,
   Tooltip,
-  Typography,
 } from '@material-ui/core';
-import { CheckBox, CheckBoxOutlineBlank, ChevronLeft, ExpandMore } from '@material-ui/icons';
-import debounce from 'lodash.debounce';
-import { action, runInAction } from 'mobx';
-import { useLocalStore, useObserver } from 'mobx-react';
+import { Add, ExpandMore, ChevronLeft, CheckBoxOutlineBlank, CheckBox } from '@material-ui/icons';
+import { runInAction, action } from 'mobx';
+import { useObserver, useLocalStore } from 'mobx-react';
 import React, { useEffect } from 'react';
+import {
+  ResourcePreviewCell,
+  ResourcePickerProps,
+  Resource,
+} from '@builder.io/commerce-plugin-tools';
+import debounce from 'lodash.debounce';
 
 export const CategoriesPicker: React.FC<
   ResourcePickerProps & { value?: any; rootCategory?: string }

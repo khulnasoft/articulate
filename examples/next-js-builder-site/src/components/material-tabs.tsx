@@ -1,7 +1,7 @@
-import { BuilderBlocks, BuilderElement } from '@builder.io/react';
-import Tab from '@material-ui/core/Tab';
-import MuiTabs from '@material-ui/core/Tabs';
 import * as React from 'react';
+import MuiTabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { Builder, BuilderBlocks, BuilderElement } from '@builder.io/react';
 
 export interface MaterialTabsProps {
   centered: boolean;

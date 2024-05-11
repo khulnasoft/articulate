@@ -1,4 +1,4 @@
-import { onChange, withBuilder } from '@builder.io/react';
+import { BuilderStore, onChange, withBuilder } from '@builder.io/react';
 import * as React from 'react';
 import { AssignBlockProps } from '../interfaces/component-props';
 

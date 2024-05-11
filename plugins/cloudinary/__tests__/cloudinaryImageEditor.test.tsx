@@ -1,11 +1,11 @@
 /* tslint:disable:no-empty */
-import { Button, Typography } from '@material-ui/core';
-import { mount } from 'enzyme';
 import 'jest';
 import React from 'react';
-import CloudinayCredentialsDialog from '../src/CloudinaryCredentialsDialog';
+import { mount } from 'enzyme';
 import CloudinaryImageEditor from '../src/CloudinaryImageEditor';
-import { CloudinaryImage, CloudinaryMediaLibraryDialog } from '../src/CloudinaryMediaLibraryDialog';
+import CloudinayCredentialsDialog from '../src/CloudinaryCredentialsDialog';
+import { CloudinaryMediaLibraryDialog, CloudinaryImage } from '../src/CloudinaryMediaLibraryDialog';
+import { Button, Typography } from '@material-ui/core';
 
 import TestConstants from './TestConstants';
 

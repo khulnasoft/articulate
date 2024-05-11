@@ -1,21 +1,21 @@
 import { Builder } from '@builder.io/react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Paper from '@material-ui/core/Paper';
-import TextField from '@material-ui/core/TextField';
 import Search from '@material-ui/icons/Search';
+import Router from 'next/router';
+import useEventListener from 'use-typed-event-listener';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import Paper from '@material-ui/core/Paper';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import TextField from '@material-ui/core/TextField';
+import List from '@material-ui/core/List';
+import { useRef, useEffect, useState } from 'react';
 import escapeRegExp from 'lodash/escapeRegExp';
 import uniqBy from 'lodash/uniqBy';
-import Router from 'next/router';
-import { useEffect, useRef, useState } from 'react';
-import useDebounce from 'react-use/lib/useDebounce';
-import useEventListener from 'use-typed-event-listener';
+import { GoogleSearchResponse } from '../interfaces/google-json-search';
 import { renderLink as RenderLink } from '../functions/render-link';
 import { DiscourseResponse } from '../interfaces/discourse-search';
-import { GoogleSearchResponse } from '../interfaces/google-json-search';
+import useDebounce from 'react-use/lib/useDebounce';
 import { defaultSearchBarPlaceholder } from './docs-search.config';
 
 function escapeHtml(unsafeText: string) {

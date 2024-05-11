@@ -1,6 +1,6 @@
-import { CacheProvider, EmotionCache } from '@emotion/react'
 import type { AppProps } from 'next/app'
 import { Layout } from '../components/Layout'
+import { CacheProvider, EmotionCache } from '@emotion/react'
 
 import { createEmotionCache } from '../helpers/create-emotion-cache'
 

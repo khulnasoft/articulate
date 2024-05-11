@@ -3,6 +3,7 @@ import json from 'rollup-plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import regexReplace from 'rollup-plugin-re';
 import replace from 'rollup-plugin-replace';
+import sourceMaps from 'rollup-plugin-sourcemaps';
 import typescript from 'rollup-plugin-typescript2';
 
 const pkg = require('./package.json');

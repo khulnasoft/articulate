@@ -1,7 +1,7 @@
 import { registerDataPlugin } from '@builder.io/data-plugin-tools';
-import { Input } from '@builder.io/sdk';
-import { createDeliveryClient } from '@kentico/kontent-delivery';
 import pkg from '../package.json';
+import { createDeliveryClient } from '@kentico/kontent-delivery';
+import { Input } from '@builder.io/sdk';
 
 // development URL https://localhost:1268/plugin.system.js?pluginId=@builder.io/plugin-kontent-ai
 

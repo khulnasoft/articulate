@@ -1,4 +1,4 @@
-import { onChange, withBuilder } from '@builder.io/react';
+import { BuilderStore, onChange, withBuilder } from '@builder.io/react';
 import * as React from 'react';
 import { CaptureBlockProps } from '../interfaces/component-props';
 

@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { Builder, BuilderElement } from '@builder.io/sdk';
 import { jsx } from '@emotion/core';
-import hash from 'hash-sum';
 import React, { PropsWithChildren } from 'react';
 import { BuilderComponent } from '../components/builder-component.component';
+import { Builder, BuilderElement } from '@builder.io/sdk';
+import hash from 'hash-sum';
 import { NoWrap } from '../components/no-wrap';
-import { omit } from '../functions/utils';
-import { withBuilder } from '../functions/with-builder';
 import { BuilderStoreContext } from '../store/builder-store';
+import { withBuilder } from '../functions/with-builder';
+import { omit } from '../functions/utils';
 
 const size = (thing: object) => Object.keys(thing).length;
 

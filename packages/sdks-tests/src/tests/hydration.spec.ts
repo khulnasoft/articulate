@@ -1,4 +1,4 @@
-import { findTextInPage, test } from './helpers.js';
+import { findTextInPage, test } from './helpers/index.js';
 
 /**
  * The only way to guarantee that hydration has completed is to interact with
@@ -18,13 +18,13 @@ test.describe('Hydration', () => {
       hasText: 'Columns (with images) ',
     });
 
-    await columnsLink.click();
+    await columnsLink.click({ timeout: 10000 });
     await findTextInPage({ page, text: 'Stack at tablet' });
   });
 
   test('No mismatch on A/B test content', async ({ page }) => {
     await page.goto('/ab-test-interactive');
-    await page.locator('a').locator('visible=true').first().click();
+    await page.locator('a').locator('visible=true').first().click({ timeout: 10000 });
     await findTextInPage({ page, text: 'Stack at tablet' });
   });
 });

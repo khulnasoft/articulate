@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { ConditionBlock } from '../../react/components/Condition';
-import { builderComponentIdRegex, mockState, text } from '../modules/helpers';
+import { mockState, text, builderComponentIdRegex } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 describe('Condition', () => {
   test('Basic True', () => {

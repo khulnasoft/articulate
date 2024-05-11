@@ -1,16 +1,17 @@
 import { ChildProcess, spawn } from 'child_process';
-import { bold, green, red, yellow } from 'colorette';
 import {
   existsSync,
+  readdirSync,
   lstatSync,
+  unlinkSync,
+  rmdirSync,
   readFile,
   readdir,
-  readdirSync,
-  rmdirSync,
-  unlinkSync,
 } from 'fs-extra';
 import { join } from 'path';
+import { bold, green, red, yellow } from 'colorette';
 import { prompt } from './vendor/prompts';
+import { saveLogin } from './login';
 
 export const IS_YARN = (() => {
   const config = process.env['npm_config_registry'];

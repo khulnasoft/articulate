@@ -1,18 +1,18 @@
 import {
   Builder,
   BuilderComponent,
-  Class,
+  isBrowser,
+  Input,
   Component,
   GetContentOptions,
-  Input,
-  isBrowser,
+  Class,
 } from './src/builder.class';
-export { Builder, BuilderComponent, Class, Component, GetContentOptions, Input, isBrowser };
+export { Builder, BuilderComponent, isBrowser, Input, Component, GetContentOptions, Class };
 
 export { BehaviorSubject, Subscription } from './src/classes/observable.class';
 
-export { ApiVersion } from './src/types/api-version';
-export { BuilderContent, BuilderContentVariation } from './src/types/content';
 export { BuilderElement } from './src/types/element';
+export { BuilderContent, BuilderContentVariation } from './src/types/content';
+export { ApiVersion } from './src/types/api-version';
 
 export { builder } from './src/constants/builder';

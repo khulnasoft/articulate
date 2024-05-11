@@ -1,8 +1,8 @@
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { Image } from '../src/blocks/Image';
-import { BuilderPage } from '../src/builder-react';
+import * as reactTestRenderer from 'react-test-renderer';
 import { block } from './functions/render-block';
+import { BuilderPage } from '../src/builder-react';
 
 describe('Image', () => {
   it('Builder image url', () => {

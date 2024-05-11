@@ -1,9 +1,9 @@
-import { Builder } from '@builder.io/react';
-import * as Sentry from '@sentry/browser';
-import amplitude from 'amplitude-js';
-import defaults from 'lodash/defaults';
 import throttle from 'lodash/throttle';
-import { getCookie, getReferrerCookie } from '../scripts/init-referrer-cookie';
+import defaults from 'lodash/defaults';
+import amplitude from 'amplitude-js';
+import * as Sentry from '@sentry/browser';
+import { Builder } from '@builder.io/react';
+import { getReferrerCookie, getCookie } from '../scripts/init-referrer-cookie';
 
 export const isDev = [
   'localhost',

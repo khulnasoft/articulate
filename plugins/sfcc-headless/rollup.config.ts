@@ -1,9 +1,9 @@
-import json from '@rollup/plugin-json';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import esbuild from 'rollup-plugin-esbuild';
 import replace from 'rollup-plugin-replace';
 import serve from 'rollup-plugin-serve';
+import esbuild from 'rollup-plugin-esbuild';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
+import commonjs from 'rollup-plugin-commonjs';
 
 const SERVE = process.env.SERVE === 'true';
 

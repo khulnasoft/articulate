@@ -17,8 +17,8 @@ const getPrs = async (extra = '') => {
 
   console.log(prsStr, prs);
 
-  // exclude `khulnasoft/articulate-internal` PRs
-  const cleanedPrs = prs.filter(pr => pr.url.includes('khulnasoft/articulate/pull'));
+  // exclude `BuilderIO/builder-internal` PRs
+  const cleanedPrs = prs.filter(pr => pr.url.includes('BuilderIO/builder/pull'));
   return cleanedPrs;
 };
 

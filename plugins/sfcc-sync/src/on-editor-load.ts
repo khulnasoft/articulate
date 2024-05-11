@@ -1,6 +1,6 @@
 import appState from '@builder.io/app-context';
-import pkg from '../package.json';
 import { getSFCCWebhookIndex } from './utils';
+import pkg from '../package.json';
 
 interface ContentEditorActions {
   updatePreviewUrl: (url: string) => void;

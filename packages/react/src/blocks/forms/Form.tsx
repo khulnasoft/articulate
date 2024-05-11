@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { Builder, BuilderElement, builder } from '@builder.io/sdk';
 import { jsx } from '@emotion/core';
 import React from 'react';
 import { BuilderBlock as BuilderBlockComponent } from '../../components/builder-block.component';
+import { BuilderElement, Builder, builder } from '@builder.io/sdk';
 import { BuilderBlocks } from '../../components/builder-blocks.component';
-import { get } from '../../functions/get';
-import { set } from '../../functions/set';
-import { withBuilder } from '../../functions/with-builder';
 import { BuilderStoreContext } from '../../store/builder-store';
+import { set } from '../../functions/set';
+import { get } from '../../functions/get';
+import { withBuilder } from '../../functions/with-builder';
 
 export interface FormProps {
   attributes?: any;

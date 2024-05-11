@@ -1,13 +1,13 @@
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Inject, Injector, ModuleWithProviders, NgModule, PLATFORM_ID } from '@angular/core';
+import './polyfills/custom-elements-es5-adapter';
 import { Builder } from '@builder.io/sdk';
-import { BuilderBlocksOutletComponent } from './components/builder-blocks-outlet/builder-blocks-outlet.component';
-import { BuilderBlocksComponent } from './components/builder-blocks/builder-blocks.component';
+import { NgModule, ModuleWithProviders, Injector, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { BuilderContentComponent } from './components/builder-content/builder-content.component';
 import { BuilderContentDirective } from './directives/builder-content.directive';
-import './polyfills/custom-elements-es5-adapter';
-import { BuilderContentService } from './services/builder-content.service';
 import { BUILDER_API_KEY, BuilderService } from './services/builder.service';
+import { BuilderContentService } from './services/builder-content.service';
+import { BuilderBlocksComponent } from './components/builder-blocks/builder-blocks.component';
+import { BuilderBlocksOutletComponent } from './components/builder-blocks-outlet/builder-blocks-outlet.component';
 
 import { BuilderComponentComponent } from './components/builder-component/builder-component.component';
 import { BuilderComponentService } from './components/builder-component/builder-component.service';

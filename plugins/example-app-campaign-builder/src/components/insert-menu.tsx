@@ -1,8 +1,9 @@
 /** @jsx jsx */
-import { Component } from '@builder.io/sdk'
 import { jsx } from '@emotion/core'
+import React from 'react'
 import { useObserver } from 'mobx-react'
 import { ApplicationContext } from '../interfaces/application-context'
+import { Builder, Component } from '@builder.io/sdk'
 
 const context: ApplicationContext = require('@builder.io/app-context').default
 

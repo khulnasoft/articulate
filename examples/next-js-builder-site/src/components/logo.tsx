@@ -1,4 +1,5 @@
 import { withBuilder } from '@builder.io/react';
+import * as React from 'react';
 import Image from 'next/image';
 
 const logoWhite = '/assets/logo-white.png';

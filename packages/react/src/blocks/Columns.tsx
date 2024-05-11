@@ -3,10 +3,10 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 
 import { BuilderElement } from '@builder.io/sdk';
-import { Link } from '../components/Link';
 import { BuilderBlocks } from '../components/builder-blocks.component';
-import { Breakpoints, getSizesForBreakpoints } from '../constants/device-sizes.constant';
 import { withBuilder } from '../functions/with-builder';
+import { Link } from '../components/Link';
+import { Breakpoints, getSizesForBreakpoints } from '../constants/device-sizes.constant';
 
 const DEFAULT_ASPECT_RATIO = 0.7004048582995948;
 

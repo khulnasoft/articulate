@@ -1,4 +1,4 @@
-import { BuilderContent, BuilderElement, Component, Input } from '@builder.io/sdk';
+import { BuilderContent, Input, BuilderElement, Component } from '@builder.io/sdk';
 import React from 'react';
 type Content = BuilderContent | ContentModel;
 

@@ -14,16 +14,16 @@ import {
   Typography,
 } from '@material-ui/core';
 import { Create, Search } from '@material-ui/icons';
-import throttle from 'lodash/throttle';
-import { action, runInAction } from 'mobx';
-import { useLocalStore, useObserver } from 'mobx-react';
-import pluralize from 'pluralize';
+import { runInAction, action } from 'mobx';
+import { useObserver, useLocalStore } from 'mobx-react';
 import React, { useEffect } from 'react';
-import { CommerceAPIOperations } from '..';
-import { SetEcomKeysMessage } from '../components/set-keys-message';
-import { BuilderRequest } from '../interfaces/builder-request';
 import { CustomReactEditorProps } from '../interfaces/custom-react-editor-props';
 import { Resource } from '../interfaces/resource';
+import { BuilderRequest } from '../interfaces/builder-request';
+import { SetEcomKeysMessage } from '../components/set-keys-message';
+import { CommerceAPIOperations } from '..';
+import pluralize from 'pluralize';
+import throttle from 'lodash/throttle';
 
 export interface ResourcesPickerButtonProps
   extends CustomReactEditorProps<BuilderRequest | string> {

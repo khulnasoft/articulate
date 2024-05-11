@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import React from 'react';
 import { Image } from '@builder.io/react';
-import Box from '@mui/material/Box';
+import { Parallax, Background } from 'react-parallax';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Background, Parallax } from 'react-parallax';
+import Box from '@mui/material/Box';
 
 const Hero = props => {
   const { image, title, parallaxStrength, buttonLink, buttonText, height, darkMode } = props;

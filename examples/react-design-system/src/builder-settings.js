@@ -2,18 +2,18 @@ import { Builder, builder } from '@builder.io/react';
 
 // Be sure to import all of your components where you use <BuilderComponent /> so they are
 // bundled and accessible
-import './components/Button/Button.builder';
-import './components/CustomColumns/CustomColumns.builder';
-import './components/DoubleColumns/DoubleColumns.builder';
-import './components/DynamicColumns/DynamicColumns.builder';
-import './components/Heading/Heading.builder';
-import './components/Hero/Hero.builder';
-import './components/HeroWithChildren/HeroWithChildren.builder';
 import './components/ProductsList/ProductsList.builder';
-import './components/ProductsListWithServerSideData/ProductsListWithServerSideData.builder';
+import './components/Hero/Hero.builder';
+import './components/TripleColumns/TripleColumns.builder';
+import './components/DoubleColumns/DoubleColumns.builder';
 import './components/Review/Review.builder';
 import './components/ReviewsSlider/ReviewsSlider.builder';
-import './components/TripleColumns/TripleColumns.builder';
+import './components/Button/Button.builder';
+import './components/Heading/Heading.builder';
+import './components/HeroWithChildren/HeroWithChildren.builder';
+import './components/DynamicColumns/DynamicColumns.builder';
+import './components/ProductsListWithServerSideData/ProductsListWithServerSideData.builder';
+import './components/CustomColumns/CustomColumns.builder';
 
 // Add your public apiKey here
 const YOUR_KEY = '7f7bbcf72a1a4d72bac5daa359e7befd';

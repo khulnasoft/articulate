@@ -14,7 +14,7 @@ Setup your directory structure as shown here:
 
 ```bash
 - qwik-sdk-workspace/
-  - builder/              # git clone git@github.com:khulnasoft/articulate.git
+  - builder/              # git clone git@github.com:BuilderIO/builder.git
   - qwik/                 # git clone git@github.com:BuilderIO/qwik.git
   - mitosis/              # git clone git@github.com:BuilderIO/mitosis.git
   - test/                 # npm create qwik@latest # QwikCity starter project

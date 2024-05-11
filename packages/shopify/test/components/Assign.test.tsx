@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { AssignBlock } from '../../react/components/Assign';
 import { mockStateWithShopify } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 describe('Assign', () => {
   test('Basic assignment', () => {

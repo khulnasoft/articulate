@@ -1,12 +1,12 @@
-import camelCase from 'lodash.camelcase';
-import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
 import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import sourceMaps from 'rollup-plugin-sourcemaps';
+import camelCase from 'lodash.camelcase';
+import typescript from 'rollup-plugin-typescript2';
+import json from 'rollup-plugin-json';
 import replace from 'rollup-plugin-replace';
 import serve from 'rollup-plugin-serve';
-import sourceMaps from 'rollup-plugin-sourcemaps';
-import typescript from 'rollup-plugin-typescript2';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 
 const SERVE = process.env.SERVE === 'true';
 

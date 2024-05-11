@@ -1,8 +1,8 @@
+import React, { Fragment } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { Builder, BuilderComponent } from '@builder.io/react';
 import cheerio from 'cheerio';
 import Head from 'next/head';
-import { Fragment } from 'react';
-import { renderToStaticMarkup } from 'react-dom/server';
 
 function toAmp(htmlStr) {
   return (

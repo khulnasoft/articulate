@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { table } from './airtable'
 import auth0 from './auth0'
+import { table } from './airtable'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async function (
   spaceId: string,

@@ -9,6 +9,7 @@ const SdkEnum = z.enum([
   'solid',
   'svelte',
   'vue',
+  'angular',
   /**
    * Run all tests, including old React SDK.
    */
@@ -35,6 +36,8 @@ export type PackageName =
   | 'nuxt'
   | 'svelte'
   | 'sveltekit'
+  | 'angular'
+  | 'angular-ssr'
   | 'gen1-react'
   | 'gen1-remix'
   | 'gen1-next';

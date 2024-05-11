@@ -1,6 +1,6 @@
-import cn from 'classnames';
-import Link from 'next/link';
 import BuilderImage from './builder-image';
+import Link from 'next/link';
+import cn from 'classnames';
 
 export default function CoverImage({ title, url, slug }) {
   const image = (

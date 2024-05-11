@@ -1,6 +1,6 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
 import pkg from '../package.json';
+import appState from '@builder.io/app-context';
 import { getDataConfig } from './data-plugin';
 
 registerCommercePlugin(

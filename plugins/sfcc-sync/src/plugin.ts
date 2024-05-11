@@ -1,9 +1,9 @@
-import appState from '@builder.io/app-context';
 import { Builder } from '@builder.io/react';
-import pkg from '../package.json';
-import { createWebhook } from './create-web-hook';
-import { getPath, onContentEditorLoad } from './on-editor-load';
+import appState from '@builder.io/app-context';
 import { syncToSFCC } from './sync-to-sfcc';
+import { createWebhook } from './create-web-hook';
+import pkg from '../package.json';
+import { getPath, onContentEditorLoad } from './on-editor-load';
 import { getSFCCWebhookIndex } from './utils';
 
 Builder.register('editor.onLoad', onContentEditorLoad);

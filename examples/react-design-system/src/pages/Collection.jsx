@@ -1,5 +1,6 @@
-import { BuilderComponent } from '@builder.io/react';
+import React from 'react';
 import { ProductsList } from '../components/ProductsList/ProductsList';
+import { BuilderComponent } from '@builder.io/react';
 
 export function Collection() {
   return (

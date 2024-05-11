@@ -1,8 +1,12 @@
-import appState from '@builder.io/app-context';
-import { CommerceAPIOperations, registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
+import {
+  CommerceAPIOperations,
+  CommercePluginConfig,
+  registerCommercePlugin,
+} from '@builder.io/commerce-plugin-tools';
 import pkg from '../package.json';
 import { CategoriesPicker } from './CategoriesPicker';
 import { ProductsPicker } from './ProductsPicker';
+import appState from '@builder.io/app-context';
 import { dataProvider } from './data-provider';
 
 registerCommercePlugin(

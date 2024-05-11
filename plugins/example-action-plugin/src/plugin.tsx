@@ -1,6 +1,6 @@
+import React from 'react';
 import appContext from '@builder.io/app-context';
 import { TrackChanges } from '@material-ui/icons';
-import React from 'react';
 
 export const trackEventId = 'track-gtag';
 

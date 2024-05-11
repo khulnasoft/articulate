@@ -5,14 +5,14 @@
 import { Builder, builder } from '@builder.io/react'
 
 // Import any Builder components we want to use
-import '../blocks/header/cart/cart.builder'
-import '../blocks/header/logo/logo.builder'
-import '../blocks/header/nav-links/nav-links.builder'
-import '../blocks/header/search-bar/search-bar.builder'
 import '../blocks/header/spacer/spacer.builder'
+import '../blocks/header/nav-links/nav-links.builder'
+import '../blocks/header/logo/logo.builder'
+import '../blocks/header/search-bar/search-bar.builder'
+import '../blocks/header/cart/cart.builder'
+import '../blocks/page/hero/hero.builder'
 import '../blocks/page/double-columns/double-columns.builder'
 import '../blocks/page/dynamic-columns/dynamic-columns.builder'
-import '../blocks/page/hero/hero.builder'
 
 builder.init(process.env.BUILDER_PUBLIC_KEY!)
 

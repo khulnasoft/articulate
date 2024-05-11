@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { Builder, GetContentOptions } from '@builder.io/sdk';
+import { GetContentOptions, Builder } from '@builder.io/sdk';
 import { BuilderService } from '../../services/builder.service';
 
 @Component({

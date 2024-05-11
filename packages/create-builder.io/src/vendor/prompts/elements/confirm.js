@@ -1,7 +1,7 @@
-import { gray, green } from 'colorette';
-import { cursor, erase } from 'sisteransi';
-import { style } from '../util';
+import { bold, green, gray } from 'colorette';
 import { Prompt } from './prompt';
+import { style } from '../util';
+import { erase, cursor } from 'sisteransi';
 
 /**
  * ConfirmPrompt Base Element

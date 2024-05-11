@@ -1,11 +1,11 @@
-import chalk from 'chalk';
-import cliProgress from 'cli-progress';
-import { createHash } from 'crypto';
+import { createClient } from './autogen/client/createClient';
 import fse from 'fs-extra';
 import { kebabCase, omit } from 'lodash';
+import chalk from 'chalk';
+import { readAsJson, getFiles, getDirectories, replaceField } from './utils';
+import cliProgress from 'cli-progress';
+import { createHash } from 'crypto';
 import traverse from 'traverse';
-import { createClient } from './autogen/client/createClient';
-import { getDirectories, getFiles, readAsJson, replaceField } from './utils';
 
 const MULTIBAR = new cliProgress.MultiBar(
   {

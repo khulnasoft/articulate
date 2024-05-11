@@ -1,9 +1,9 @@
 import { CommerceAPIOperations, registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
-import pkg from '../package.json';
+import { searchProductsRequest } from './products-search.query';
+import { productRequest } from './product.query';
 import { searchCategoriesRequest } from './categories-search.query';
 import { categoryRequest } from './category.query';
-import { productRequest } from './product.query';
-import { searchProductsRequest } from './products-search.query';
+import pkg from '../package.json';
 
 registerCommercePlugin(
   {

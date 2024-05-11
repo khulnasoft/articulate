@@ -1,40 +1,40 @@
 'use client';
-import {
-  BehaviorSubject,
-  Builder,
-  builder,
-  BuilderElement,
-  Component,
-  BuilderContent as Content,
-  GetContentOptions,
-  Subscription,
-} from '@builder.io/sdk';
-import { css, jsx } from '@emotion/core';
-import hash from 'hash-sum';
 import React, { PropsWithChildren } from 'react';
 import ReactDOM from 'react-dom';
-import onChange from '../../lib/on-change';
-import { BuilderStoreContext } from '../store/builder-store';
-import { BuilderBlocks } from './builder-blocks.component';
+import { jsx, css } from '@emotion/core';
 import { BuilderContent, getContentWithInfo } from './builder-content.component';
+import { BuilderBlocks } from './builder-blocks.component';
+import {
+  Builder,
+  GetContentOptions,
+  builder,
+  Subscription,
+  BehaviorSubject,
+  BuilderElement,
+  BuilderContent as Content,
+  Component,
+} from '@builder.io/sdk';
+import { BuilderStoreContext } from '../store/builder-store';
+import hash from 'hash-sum';
+import onChange from '../../lib/on-change';
 
 export { onChange };
 
-import { Url } from 'url';
 import { Breakpoints, getSizesForBreakpoints, Sizes } from '../constants/device-sizes.constant';
-import { debounceNextTick } from '../functions/debonce-next-tick';
-import { getBuilderPixel } from '../functions/get-builder-pixel';
-import { isDebug } from '../functions/is-debug';
-import { throttle } from '../functions/throttle';
-import { tryEval } from '../functions/try-eval';
 import {
   BuilderAsyncRequestsContext,
-  isRequestInfo,
-  RequestInfo,
   RequestOrPromise,
+  RequestInfo,
+  isRequestInfo,
 } from '../store/builder-async-requests';
+import { Url } from 'url';
+import { debounceNextTick } from '../functions/debonce-next-tick';
+import { throttle } from '../functions/throttle';
 import { BuilderMetaContext } from '../store/builder-meta';
+import { tryEval } from '../functions/try-eval';
 import { toError } from '../to-error';
+import { getBuilderPixel } from '../functions/get-builder-pixel';
+import { isDebug } from '../functions/is-debug';
 
 export type RegisteredComponent = Component & {
   component?: React.ComponentType<any>;
@@ -1384,10 +1384,10 @@ export class BuilderComponent extends React.Component<
         state: Object.assign(this.rootState, {
           ...this.state.state,
           location: this.locationState,
-          deviceSize: this.deviceSizeState,
           device: this.device,
           ...data.state,
           ...this.externalState,
+          deviceSize: this.deviceSizeState,
         }),
       };
       if (this.mounted) {

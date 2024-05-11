@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 import * as React from 'react';
-import * as reactTestRenderer from 'react-test-renderer';
 import { CaptureBlock } from '../../react/components/Capture';
 import { mockStateWithShopify } from '../modules/helpers';
+import * as reactTestRenderer from 'react-test-renderer';
 
 describe('Capture', () => {
   test('With simple string', () => {

@@ -1,6 +1,6 @@
 import type { Browser } from '@playwright/test';
 import { expect } from '@playwright/test';
-import { test } from './helpers.js';
+import { excludeTestFor, test } from './helpers/index.js';
 const SELECTOR = 'div[builder-content-id]';
 
 const createContextWithCookies = async ({
@@ -137,6 +137,7 @@ test.describe('A/B tests', () => {
     }
   });
   test.describe('nested symbol', () => {
+    test.fail(excludeTestFor({ angular: true }), 'Nested symbols are not supported in Angular');
     const CONTENT_ID = 'd5580c8ba90443638ed240723abf67f0';
     const VARIANT_1_ID = 'f7c6d013fa844a75aefe0f629723fb3b';
 

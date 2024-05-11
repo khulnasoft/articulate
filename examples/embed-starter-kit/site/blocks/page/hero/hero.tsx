@@ -1,7 +1,7 @@
-import { alpha, useTheme } from '@mui/material'
+import { useTheme, alpha } from '@mui/material'
 import Grid from '@mui/material/Grid'
-import Typography from '@mui/material/Typography'
 import Image from 'next/image'
+import Typography from '@mui/material/Typography'
 
 interface HeroProps {
   imageSrc: string

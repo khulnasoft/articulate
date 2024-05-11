@@ -1,9 +1,9 @@
 import { Builder } from '@builder.io/sdk'
+import { settings } from './state/settings'
 import { reaction } from 'mobx'
 import { Header } from './components/editor-header'
 import { SimplePage } from './components/simple-page'
 import { ApplicationContext } from './interfaces/application-context'
-import { settings } from './state/settings'
 
 const context: ApplicationContext = require('@builder.io/app-context').default
 const pluginId = 'my-white-labeling-plugin'

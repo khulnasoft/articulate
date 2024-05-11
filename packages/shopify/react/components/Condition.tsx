@@ -1,6 +1,8 @@
 import builder, {
   Builder,
   BuilderBlockComponent,
+  BuilderElement,
+  BuilderStore,
   stringToFunction,
   withBuilder,
 } from '@builder.io/react';

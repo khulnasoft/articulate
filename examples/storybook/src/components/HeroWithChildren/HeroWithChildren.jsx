@@ -1,6 +1,7 @@
-import { Image } from '@builder.io/react';
+import React from 'react';
+import { Parallax, Background } from 'react-parallax';
+import { BuilderBlockComponent, Image } from '@builder.io/react';
 import { makeStyles } from '@material-ui/core';
-import { Background, Parallax } from 'react-parallax';
 
 const useStyles = makeStyles(() => ({
   container: {

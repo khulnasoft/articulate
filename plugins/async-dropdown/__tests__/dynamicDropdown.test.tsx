@@ -1,9 +1,9 @@
 // @ts-ignore
-import '@testing-library/jest-dom/extend-expect';
-import { act, cleanup, render, wait, waitForDomChange } from '@testing-library/react';
 import React from 'react';
-import { Simulate } from 'react-dom/test-utils';
 import { Component } from '../src/components/index';
+import { render, waitForDomChange, cleanup, act, wait } from '@testing-library/react';
+import { Simulate } from 'react-dom/test-utils';
+import '@testing-library/jest-dom/extend-expect';
 import { orchestrateSelections } from '../src/helpers/selectionsOrchestrator';
 import { IOption } from '../src/models/IOption';
 

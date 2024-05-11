@@ -1,6 +1,6 @@
-import { Builder } from '@builder.io/react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import useEventListener from 'use-typed-event-listener';
+import { Builder } from '@builder.io/react';
 
 export type ReadProgressProps = {
   className?: string;

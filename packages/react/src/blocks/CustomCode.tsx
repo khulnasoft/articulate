@@ -1,6 +1,6 @@
 'use client';
-import { Builder, BuilderElement } from '@builder.io/sdk';
 import React from 'react';
+import { BuilderElement, Builder } from '@builder.io/sdk';
 import { withBuilder } from '../functions/with-builder';
 
 interface Props {

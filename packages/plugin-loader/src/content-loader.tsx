@@ -1,6 +1,6 @@
-import { BuilderComponent } from '@builder.io/react';
-import * as React from 'react';
 import * as reactDom from 'react-dom';
+import * as React from 'react';
+import { BuilderComponent } from '@builder.io/react';
 
 function ComponentLoader(props: { content?: any }) {
   const [value, setValue] = React.useState(null);

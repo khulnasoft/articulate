@@ -1,6 +1,6 @@
 {
   "name": "@builder.io/sdk-qwik",
-  "version": "0.12.1",
+  "version": "0.14.21",
   "homepage": "https://github.com/khulnasoft/articulate/tree/main/packages/sdks/output/qwik",
   "repository": {
     "type": "git",
@@ -78,17 +78,17 @@
         "require": "./lib/browser/index.qwik.cjs"
       }
     },
-    "./edge": {
+    "./bundle/edge": {
       "types": "./types/src/index.d.ts",
       "import": "./lib/edge/index.qwik.mjs",
       "require": "./lib/edge/index.qwik.cjs"
     },
-    "./node": {
+    "./bundle/node": {
       "types": "./types/src/index.d.ts",
       "import": "./lib/node/index.qwik.mjs",
       "require": "./lib/node/index.qwik.cjs"
     },
-    "./browser": {
+    "./bundle/browser": {
       "types": "./types/src/index.d.ts",
       "import": "./lib/browser/index.qwik.mjs",
       "require": "./lib/browser/index.qwik.cjs"
@@ -109,7 +109,7 @@
     "isolated-vm": "^4.6.0"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.2.6",
+    "@builder.io/qwik": "^1.5.1",
     "@builder.io/sdks": "workspace:*",
     "@types/node": "latest",
     "nx": "^16.6.0",

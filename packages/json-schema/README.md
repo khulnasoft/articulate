@@ -12,7 +12,7 @@ builder content schema:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/khulnasoft/articulate/main/packages/json-schema/dist/BuilderContent.json"
+  "$schema": "https://raw.githubusercontent.com/BuilderIO/builder/main/packages/json-schema/dist/BuilderContent.json"
 }
 ```
 

@@ -1,9 +1,10 @@
-import { USE_CODEGEN } from '@/constants/use-codegen';
+import React from 'react';
 import { Builder, builder, BuilderComponent } from '@builder.io/react';
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { defaultDescription, defaultTitle } from '../../constants/seo-tags';
 import { renderLink } from '../../functions/render-link';
+import { defaultTitle, defaultDescription } from '../../constants/seo-tags';
+import { GetStaticProps } from 'next';
+import { USE_CODEGEN } from '@/constants/use-codegen';
 
 builder.init('YJIGb4i01jvw0SRdL5Bt');
 

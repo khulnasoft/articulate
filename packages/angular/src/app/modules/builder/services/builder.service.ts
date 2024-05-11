@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable, Optional } from '@angular/core';
+import { Injectable, Inject, Optional } from '@angular/core';
+import { RESPONSE, REQUEST } from '@nguniversal/express-engine/tokens';
 import { Builder } from '@builder.io/sdk';
-import { REQUEST, RESPONSE } from '@nguniversal/express-engine/tokens';
+import { HttpClient } from '@angular/common/http';
 import { Request, Response } from 'express';
 import { BuilderContentComponent } from '../components/builder-content/builder-content.component';
 

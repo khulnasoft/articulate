@@ -1,5 +1,6 @@
-import { BuilderComponent } from '@builder.io/react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { BuilderComponent } from '@builder.io/react';
 
 const useStyles = makeStyles(theme => ({
   cart: {

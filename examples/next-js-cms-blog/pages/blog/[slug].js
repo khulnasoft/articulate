@@ -1,14 +1,14 @@
+import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
 import Container from '@/components/container';
-import Header from '@/components/header';
-import Layout from '@/components/layout';
 import PostBody from '@/components/post-body';
+import Header from '@/components/header';
 import PostHeader from '@/components/post-header';
+import Layout from '@/components/layout';
 import PostTitle from '@/components/post-title';
+import Head from 'next/head';
 import { builder, BuilderContent, useIsPreviewing } from '@builder.io/react';
 import '@builder.io/widgets';
-import ErrorPage from 'next/error';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 // Post model created to display a specific blog post.
 // read more at: https://www.builder.io/blog/creating-blog

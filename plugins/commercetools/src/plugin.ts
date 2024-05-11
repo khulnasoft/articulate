@@ -1,8 +1,8 @@
-import appState from '@builder.io/app-context';
 import { registerCommercePlugin } from '@builder.io/commerce-plugin-tools';
 import { Resource } from '@builder.io/commerce-plugin-tools/dist/types/interfaces/resource';
-import { createRequestBuilder } from '@commercetools/api-request-builder';
 import pkg from '../package.json';
+import { createRequestBuilder } from '@commercetools/api-request-builder';
+import appState from '@builder.io/app-context';
 
 const getToken = async (options: {
   clientId: string;

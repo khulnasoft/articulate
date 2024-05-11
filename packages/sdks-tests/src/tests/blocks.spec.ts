@@ -3,14 +3,14 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { VIDEO_CDN_URL } from '../specs/video.js';
-import type { ExpectedStyles } from './helpers.js';
-import { EXCLUDE_RN, isRNSDK, test } from './helpers.js';
+import type { ExpectedStyles } from './helpers/index.js';
+import { EXCLUDE_RN, excludeTestFor, isRNSDK, test } from './helpers/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 test.describe('Blocks', () => {
-  test('Text block', async ({ page }) => {
+  test('Text', async ({ page }) => {
     test.fail(EXCLUDE_RN);
     await page.goto('/text-block');
 
@@ -48,11 +48,20 @@ test.describe('Blocks', () => {
       await expect(child).toHaveCSS('margin-right', '0px');
     }
   });
+
+  test('Button', async ({ page }) => {
+    await page.goto('/reactive-state');
+    const button = isRNSDK
+      ? page.locator('button')
+      : page.getByRole('button', { name: 'Increment Number' });
+
+    await expect(button).toHaveCSS('background-color', 'rgb(0, 0, 0)');
+  });
   /**
    * We are temporarily skipping this test because it relies on network requests.
    * TO-DO: re-enable it once we have a way to mock network requests.
    */
-  test.skip('image', async ({ page }) => {
+  test.skip('Image', async ({ page }) => {
     await page.goto('/image');
 
     const imageLocator = page.locator('img');
@@ -99,7 +108,7 @@ test.describe('Blocks', () => {
     }
   });
 
-  test.describe('video', () => {
+  test.describe('Video', () => {
     test('video render and styles', async ({ page }) => {
       test.skip(isRNSDK);
       const mockVideoPath = path.join(__dirname, '..', 'mocks', 'video.mp4');
@@ -189,6 +198,7 @@ test.describe('Blocks', () => {
       const videoContainers = page.locator('.some-class');
       const noOfVideos = await page.locator('.builder-video').count();
 
+      await expect(noOfVideos).toBeGreaterThanOrEqual(1);
       await expect(videoContainers).toHaveCount(noOfVideos);
 
       for (let i = 0; i < noOfVideos; i++) {
@@ -276,6 +286,9 @@ test.describe('Blocks', () => {
       test.skip(isRNSDK && sizeName !== 'mobile');
 
       test.describe(sizeName, () => {
+        if (sizeName === 'mobile' || sizeName === 'tablet') {
+          test.fail(excludeTestFor({ angular: true }));
+        }
         for (const [columnType, styles] of Object.entries(expected)) {
           test(columnType, async ({ page }) => {
             await page.setViewportSize(size);

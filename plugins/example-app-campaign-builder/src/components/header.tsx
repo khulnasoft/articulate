@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import { Button } from '@material-ui/core'
-import { useObserver } from 'mobx-react'
 import React from 'react'
+import { useObserver } from 'mobx-react'
 import { ApplicationContext } from '../interfaces/application-context'
+import { Button, Tabs, Tab } from '@material-ui/core'
 
 const context: ApplicationContext = require('@builder.io/app-context').default
 

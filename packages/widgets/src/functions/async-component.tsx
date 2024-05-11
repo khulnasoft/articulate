@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Loadable from 'react-loadable';
 
 // TODO: wrap in div positoin: relative padding: 50, width: 100%, height: 100% display: flex
 const Loading = () => (

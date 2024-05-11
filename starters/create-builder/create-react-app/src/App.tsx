@@ -1,5 +1,5 @@
-import { BuilderComponent } from '@builder.io/react';
 import './App.css';
+import { BuilderComponent } from '@builder.io/react';
 
 function App() {
   return (

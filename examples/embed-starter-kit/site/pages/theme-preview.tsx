@@ -1,6 +1,6 @@
+import { useRouter } from 'next/router'
 import { builder, BuilderComponent } from '@builder.io/react'
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 import { getLayoutProps } from '../helpers/get-layout-props'
 
 import '../helpers/builder-settings'

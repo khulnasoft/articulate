@@ -26,4 +26,4 @@ const delimiter = completing => gray(completing ? figures.ellipsis : figures.poi
 const item = (expandable, expanded) =>
   gray(expandable ? (expanded ? figures.pointerSmall : '+') : figures.line);
 
-export { delimiter, item, render, styles, symbol, symbols };
+export { styles, render, symbols, symbol, delimiter, item };

@@ -1,8 +1,9 @@
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/light-async';
 import javascript from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript';
 import html from 'react-syntax-highlighter/dist/cjs/languages/hljs/xml';
-import SyntaxHighlighter from 'react-syntax-highlighter/dist/cjs/light-async';
-import oneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark';
 import githubGist from 'react-syntax-highlighter/dist/cjs/styles/hljs/github-gist';
+import oneDark from 'react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark';
 
 SyntaxHighlighter.registerLanguage('html', html);
 SyntaxHighlighter.registerLanguage('xml', html);

@@ -20,4 +20,4 @@ const minifyRecords = (records: any) => {
   return records.map((record: any) => getMinifiedRecord(record))
 }
 
-export { getMinifiedRecord, minifyRecords, table }
+export { table, getMinifiedRecord, minifyRecords }

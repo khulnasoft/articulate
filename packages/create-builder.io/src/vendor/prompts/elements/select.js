@@ -1,7 +1,7 @@
 import { bold, cyan, gray, green } from 'colorette';
-import { cursor, erase } from 'sisteransi';
-import { clear, figures, style } from '../util';
 import { Prompt } from './prompt';
+import { style, clear, figures } from '../util';
+import { erase, cursor } from 'sisteransi';
 
 /**
  * SelectPrompt Base Element

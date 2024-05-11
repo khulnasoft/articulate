@@ -1,4 +1,4 @@
-import { Address, Customer } from '../types/types';
+import { Customer, Address } from '../types/types';
 import Base from './base';
 import { el } from './utils/element';
 
@@ -183,4 +183,4 @@ class ThankYou {
   }
 }
 
-export { Billing, Payment, Shipping, ThankYou };
+export { Shipping, Billing, Payment, ThankYou };

@@ -1,5 +1,5 @@
-import appState from '@builder.io/app-context';
 import { pluginId } from './constants';
+import appState from '@builder.io/app-context';
 
 export const syncToAlgolia = async (modelName: string) => {
   const pluginSettings = appState.user.organization.value.settings.plugins.get(pluginId);

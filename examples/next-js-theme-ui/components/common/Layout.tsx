@@ -1,12 +1,12 @@
 /** @jsxImportSource theme-ui */
-import { BuilderContent } from '@builder.io/react'
-import '@builder.io/widgets'
-import seoConfig from '@config/seo.json'
-import themesMap from '@config/theme'
 import React from 'react'
 import { ThemeProvider } from 'theme-ui'
-import Head from './Head'
+import { BuilderContent } from '@builder.io/react'
+import themesMap from '@config/theme'
+import '@builder.io/widgets'
+import seoConfig from '@config/seo.json'
 import HeaderSample from './HeaderSample'
+import Head from './Head'
 
 const Layout: React.FC<{ pageProps: any }> = ({ children, pageProps }) => {
   const builderTheme = pageProps.theme

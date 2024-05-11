@@ -1,9 +1,9 @@
 /* tslint:disable:no-empty */
-import { Button, TextField } from '@material-ui/core';
-import { mount } from 'enzyme';
 import 'jest';
 import React from 'react';
+import { mount } from 'enzyme';
 import CloudinayCredentialsDialog from '../src/CloudinaryCredentialsDialog';
+import { Button, TextField } from '@material-ui/core';
 import TestConstants from './TestConstants';
 
 describe('Cloudinary Credential dialog', () => {

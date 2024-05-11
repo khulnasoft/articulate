@@ -1,9 +1,9 @@
 /* tslint:disable:no-empty */
-import { Button } from '@material-ui/core';
-import { mount } from 'enzyme';
 import 'jest';
 import React from 'react';
-import { CloudinaryImage, CloudinaryMediaLibraryDialog } from '../src/CloudinaryMediaLibraryDialog';
+import { mount } from 'enzyme';
+import { CloudinaryMediaLibraryDialog, CloudinaryImage } from '../src/CloudinaryMediaLibraryDialog';
+import { Button } from '@material-ui/core';
 
 import TestConstants from './TestConstants';
 

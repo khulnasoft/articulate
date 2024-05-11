@@ -1,3 +1,4 @@
+import { Content } from '@builder.io/app-context'
 import { Builder } from '@builder.io/sdk'
 import LangugeSwitcher from './components/language-switcher'
 import { pluginId } from './constants'

@@ -1,13 +1,13 @@
-import { Button, CircularProgress, Paper, Toolbar } from '@material-ui/core'
-import ZoomIn from '@material-ui/icons/ZoomIn'
+import React, { useEffect, useState } from 'react'
 import Form from '@rjsf/material-ui'
+import { Button, CircularProgress, Paper, Toolbar } from '@material-ui/core'
+import JSONTree from 'react-json-tree'
 import auth0 from 'helpers/auth0'
+import ZoomIn from '@material-ui/icons/ZoomIn'
 import type {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
 } from 'next'
-import { useEffect, useState } from 'react'
-import JSONTree from 'react-json-tree'
 
 export default function Home({
   user,

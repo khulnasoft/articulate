@@ -1,9 +1,9 @@
 import Cors from 'cors'
-import generateEmbedToken from '../../helpers/generate-embed-token'
 import initMiddleware from '../../helpers/init-middleware'
+import generateEmbedToken from '../../helpers/generate-embed-token'
 
-import auth0 from 'helpers/auth0'
 import type { NextApiRequest, NextApiResponse } from 'next'
+import auth0 from 'helpers/auth0'
 
 // Initialize the cors middleware
 const cors = initMiddleware(

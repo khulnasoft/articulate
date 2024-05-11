@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import React from 'react';
 
 export function SetEcomKeysMessage(props: { pluginName: string; pluginId: string }) {
   return (

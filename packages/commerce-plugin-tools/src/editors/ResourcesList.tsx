@@ -1,21 +1,21 @@
 /** @jsx jsx */
-import appState from '@builder.io/app-context';
 import { jsx } from '@emotion/core';
-import { Button, CircularProgress, IconButton, Tooltip, Typography } from '@material-ui/core';
-import { Close } from '@material-ui/icons';
-import capitalize from 'lodash/capitalize';
-import { action } from 'mobx';
-import { useLocalStore, useObserver } from 'mobx-react';
-import pluralize from 'pluralize';
 import React, { useEffect } from 'react';
-import { CommerceAPIOperations } from '..';
-import { Resource } from '../interfaces/resource';
+import { action } from 'mobx';
+import { useObserver, useLocalStore } from 'mobx-react';
 import {
-  ResourcePicker,
-  ResourcePickerProps,
   ResourcePreviewCell,
   ResourcePreviewCellProps,
+  ResourcePicker,
+  ResourcePickerProps,
 } from './ResourcesPicker';
+import { CircularProgress, Button, Typography, Tooltip, IconButton } from '@material-ui/core';
+import { Close } from '@material-ui/icons';
+import appState from '@builder.io/app-context';
+import { Resource } from '../interfaces/resource';
+import capitalize from 'lodash/capitalize';
+import pluralize from 'pluralize';
+import { CommerceAPIOperations } from '..';
 
 export type PickResourceListProps = {
   api: CommerceAPIOperations;

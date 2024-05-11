@@ -1,5 +1,5 @@
-import { getCategoryPath } from './getCategoryPath';
 import { getCategorySearchParameters } from './getCategorySearchParameters';
+import { getCategoryPath } from './getCategoryPath';
 
 // TODO: remove, use faceting instead
-export { getCategoryPath, getCategorySearchParameters };
+export { getCategorySearchParameters, getCategoryPath };

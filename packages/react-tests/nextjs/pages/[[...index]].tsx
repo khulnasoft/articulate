@@ -6,6 +6,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
+import '@builder.io/widgets/dist/lib/builder-widgets-async';
+
 builder.init(getAPIKey());
 
 type StaticProps = { index: string[] };
